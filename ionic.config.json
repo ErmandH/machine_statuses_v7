@@ -1,0 +1,7 @@
+{
+  "name": "machine_statuses",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
