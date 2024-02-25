@@ -20,6 +20,7 @@ export class DeviceSelectPage implements OnInit {
   devices: any[] = [];
   ble: boolean = false;
   scanText: string = '';
+  isScanning: boolean = false;
   constructor(
     private router: Router,
     private change: ChangeDetectorRef,
@@ -96,6 +97,7 @@ export class DeviceSelectPage implements OnInit {
   }
 
   async startScanning() {
+    this.devices = []
     this.scanText = 'Scanning...';
     
 
@@ -105,7 +107,7 @@ export class DeviceSelectPage implements OnInit {
         this.change.detectChanges();
       }
     });
-    setTimeout(() => this.stopScanning(), 20000);
+    setTimeout(() => this.stopScanning(), 7000);
   }
 
   async presentAlert(){

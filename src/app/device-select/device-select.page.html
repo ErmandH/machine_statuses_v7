@@ -1,11 +1,12 @@
 <ion-header>
   <ion-toolbar padding color="primary">
-    <div *ngIf="isDeviceExist()" class="flex align-center">
+    <div *ngIf="isDeviceExist()" class="flex items-center">
       <ion-button routerLink="/" color="light" shape="round" style="margin-left: 0.8rem;">
         <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
       <ion-title>{{'select-device' | translate}}</ion-title>
       <ion-button *ngIf="scanText === ''" (click)="startScanning()" color="light" shape="round">SCAN</ion-button>
+      <b *ngIf="scanText !== ''">Scanning...</b>
       <ion-buttons slot="end" style="padding-right: 0.8rem;">
         <ion-label>
           <ion-icon name="bluetooth"></ion-icon>
@@ -16,7 +17,8 @@
     <div *ngIf="!isDeviceExist()" class="flex" style="gap: 0.5rem;">
       <ion-title>{{'select-device' | translate}}</ion-title>
       <div style="display: flex; gap: 0.5rem;">
-        <ion-button color="light" shape="round">SCAN</ion-button>
+        <ion-button *ngIf="scanText === ''" (click)="startScanning()" color="light" shape="round">SCAN</ion-button>
+        <b *ngIf="scanText !== ''">Scanning...</b>
         <ion-buttons slot="end" style="padding-right: 0.8rem;">
           <ion-label>
             <ion-icon name="bluetooth"></ion-icon>
@@ -33,20 +35,20 @@
   <!-- <h2 *ngIf="devices.length === 0">
     {{'device-not-found' | translate}}
   </h2> -->
-  <h4>{{scanText}}</h4>
-  <!-- <ion-card *ngFor="let device of devices; let i = index" (click)="selectDevice(device)">
-    <ion-card-header>
+  <ion-card *ngFor="let device of devices; let i = index" class="rounded-2xl">
+    <ion-card-content class="flex items-center justify-between">
       <ion-card-title>{{device.localName}}</ion-card-title>
-    </ion-card-header>
-  </ion-card> -->
+      <ion-button (click)="connect(device, i)" *ngIf="!device.connection" shape="round" slot="end">Connect</ion-button>
+      <ion-button (click)="disconnect(device, i)" *ngIf="device.connection" shape="round" slot="end">Disconnect</ion-button>
+    </ion-card-content>
+      
+  </ion-card>
 
-  <ion-button (click)="startScanning()">Click Me</ion-button>
-
-  <ion-list *ngIf="devices.length > 0">
+  <!-- <ion-list *ngIf="devices.length > 0">
     <ion-item *ngFor="let device of devices; let i = index">
       <b>{{device.localName}}</b>
       <ion-button (click)="connect(device, i)" *ngIf="!device.connection" slot="end">Connect</ion-button>
       <ion-button (click)="disconnect(device, i)" *ngIf="device.connection" slot="end">Disconnect</ion-button>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 </ion-content>
