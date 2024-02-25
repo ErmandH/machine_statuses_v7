@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="270mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 27000"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#9A9591;stroke-width:35.28;stroke-linejoin:bevel;stroke-miterlimit:22.9256}
+    .str1 {stroke:#9A9591;stroke-width:35.28;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .fil2 {fill:none}
+    .fil1 {fill:none;fill-rule:nonzero}
+    .fil0 {fill:#57B039}
+   ]]>
+  </style>
+ </defs>
+ <g id="Katman_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polygon class="fil0 str0" points="6794.52,14008.77 6846.84,13973.92 6917.36,13949.31 7784.81,13797.64 8609.05,14289.43 8732.86,14383.75 8752.16,14470.95 7741.9,14612.79 "/>
+  <polyline class="fil1 str1" points="8734.7,14383.74 8752.16,14470.95 7727.55,14614.81 6794.52,14008.77 6846.84,13973.92 "/>
+  <polyline class="fil1 str1" points="8752.16,14470.95 8307.45,15661.22 8241.34,15661.36 8239.15,15750.54 8325.83,15801.45 8327.48,15881.56 7732.14,15960.37 7716.9,15831.22 8239.15,15750.54 "/>
+  <polyline class="fil1 str1" points="7732.14,15960.37 7378.86,15748.04 7378.86,15616.7 7442.12,15592.6 "/>
+  <polyline class="fil1 str1" points="7444.3,15533.51 7444.3,15680.16 7716.9,15831.22 8239.15,15750.54 "/>
+  <line class="fil1 str1" x1="7716.9" y1="15831.22" x2="7727.55" y2= "14614.81" />
+  <line class="fil1 str1" x1="7444.3" y1="15533.51" x2="7396.86" y2= "15512.73" />
+  <polyline class="fil1 str1" points="7442.12,15592.6 6794.52,14479.66 6794.52,14008.77 "/>
+  <g id="_2567941558288">
+   <polygon class="fil2 str1" points="6932.15,13944.29 7784.81,13797.64 8628.23,14300.88 7738.77,14444.78 "/>
+   <polygon class="fil2 str1" points="6932.15,13944.29 6844.98,13973.89 7738.77,14536.32 8732.86,14383.75 8628.23,14300.88 7738.77,14444.78 "/>
+  </g>
+ </g>
+</svg>

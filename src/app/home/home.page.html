@@ -1,0 +1,72 @@
+<ion-header class="bg-app-primary">
+  <div class="header-container">
+    <ion-button color="light" shape="round" class="flex justify-center align-center">
+      <ion-icon slot="start" name="star"></ion-icon>
+      <span>&nbsp;15.76</span>
+    </ion-button>
+    <ion-button color="light" shape="round">
+      <ion-icon slot="start" class="fn-tractor"></ion-icon>
+      <span>&nbsp; 100 km/h</span>
+
+    </ion-button>
+    <ion-button color="light" shape="round">
+      <ion-icon slot="start" class="fn-leaf" style="color:#0bac0b;stroke:#000"></ion-icon>
+      <span>&nbsp; 50 cm</span>
+
+    </ion-button>
+    <ion-button color="light" shape="round">
+      <ion-icon slot="start" class="fn-leaf" style="color:#0bac0b;stroke:#000"></ion-icon>
+      <span>&nbsp;500 m2</span>
+
+    </ion-button>
+    <ion-button color="light" shape="round">
+      <ion-icon slot="icon-only" name="cog"></ion-icon>
+    </ion-button>
+    <ion-button color="light" shape="round">
+      <ion-icon slot="icon-only" name="log-out"> </ion-icon>
+    </ion-button>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+
+<ion-footer class="bg-app-primary" style="display: flex;justify-content: center;">
+  <div class="header-container">
+    <ion-button color="light" shape="round">
+      <ion-icon slot="start" class="fn-tractor"></ion-icon>
+      &nbsp;100 mbar
+    </ion-button>
+    <ion-button color="light" shape="round">
+      <ion-icon slot="start" class="fn-ruler"></ion-icon>
+      &nbsp;50/Kg
+    </ion-button>
+    <div class="app-logo-container">
+      <img class="app-logo" src="../../assets/imgs/logo.png">
+    </div>
+    <ion-button class="xs-toggle-button" shape="round" color="light" routerLink="/device-select">
+      <ion-icon slot="icon-only" name="bluetooth"></ion-icon>
+    </ion-button>
+    <ion-button class="sm-toggle-button" shape="round" color="light">
+      <ion-icon slot="icon-only" name="pause"></ion-icon>
+    </ion-button>
+    <div class="md-toggle-button">
+      <app-language-picker></app-language-picker>
+    </div>
+    <ion-button class="lg-toggle-button " (click)="openCloseSound()" shape="round" color="light">
+      <ion-icon [name]="sound" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-button class="lg-toggle-button" shape="round" color="light">
+      <ion-icon slot="icon-only" name="help-circle"></ion-icon>
+    </ion-button>
+    <ion-button class="popover-button" shape="round" color="light">
+      <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+    </ion-button>
+  </div>
+</ion-footer>

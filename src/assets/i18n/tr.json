@@ -1,0 +1,133 @@
+{
+    "home": "Ana Sayfa",
+    "settings-page": "Ayarlar",
+    "select-device": "Cihaz Seç",
+    "language": "Dil/Language",
+    "choose-language": "Dil Seçiniz / Choose Language",
+    "enable": "Var",
+    "disable": "Yok",
+    "hectare": "Hektar",
+    "cancel": "Vazgeç",
+    "device-not-found":"Herhangi bir cihaz bulunamadi",
+    "login": {
+        "sign-in": "GİRİŞ YAP",
+        "sign-up": "KAYDOL",
+        "or": "VEYA",
+        "forgot-password": "ŞİFREYİ UNUTTUM",
+        "e-mail": "E-Mail",
+        "password": "Şifre"
+    },
+    "setting-tabs": {
+        "general": "Genel",
+        "general-fertilizer": "Genel Gübreleme",
+        "row-enable-disable": "Ünitede Tohum Kontrolü Var/Yok",
+        "granular-motor": "Gübre Motoru"
+    },
+    "settings": {
+        "general": {
+            "seed-control-period": "Tohum Kontrol Periyodu",
+            "disc-hole-number": "Diskteki Delik Sayısı",
+            "distance-between-seeds": "Tohum Sıra Üstü Mesafe",
+            "number-of-unit": "Ünite Sayısı",
+            "distance-between-units": "Ünite Arası Mesafe (cm)",
+            "target-fertilizer-weight": "Hedef Gübre Miktarı",
+            "tolerance": "Tolerans",
+            "wheel-diameter": "Teker Çapı",
+            "number-of-signals": "Bir Turda Oluşan Sinyal Sayısı",
+            "seed-calibration": "Tohum Kalibrasyon",
+            "fertilizer-calibration": "Gübre Kalibrasyon",
+            "save": "KAYDET"
+        },
+        "general-fertilizer": {
+            "fertilizer-start-torque": "Gübre Başlangıç Torku",
+            "fertilizer-calibration-rpm": "Gübre Kalibrasyon RPM",
+            "fertilizer-calibration-tour": "Gübre Kalibrasyon Turu",
+            "multiplier": "Çarpan",
+            "engine-signal-on-a-tour": "Motor Sinyal Sayısı",
+            "the-unit-of-seed-area-meause": "Tohum Alan Ölçümünün Birimi",
+            "distance-rpm": "Hedef RPM",
+            "engine-step": "Motor Adımı",
+            "warning-description": "Üreticinize danışmadan bu değerlerin değiştirilmesi motorun hatalı dönmesine neden olacaktır. Lütfen bu değerleri üreticiniz belirtmeden değiştirmeyiniz.",
+            "restore-default-settings": "Varsayılan Ayarlara Döndür",
+            "title": "DİKKAT!",
+            "message": "Restoring to default settings...<br/> 3-2-1"
+        },
+        "row-enable-disable": {
+            "row-control": "Ünite Kontrolü"
+        },
+        "granular-motor": {
+            "motor": "Motor"
+        }
+    },
+    "tooltip": {
+        "seed-control-period": "Ekim makinenizde yaptığınız dişli ayarına göre ayarladığınız sıra üstü mesafenin burada da doğru girilmesi gerekmekte. Yanlış değer girilmesi ekranda size yanlış uyarı vermesine sebep olur.",
+        "distance-between-seeds": "Ekim makinenizde yaptığınız dişli ayarına göre ayarladığınız sıra üstü mesafenin burada da doğru girilmesi gerekmekte. Yanlış değer girilmesi ekranda size yanlış uyarı vermesine sebep olur.",
+        "disc-hole-number": "Üniteye taktığınız ekim diskinindeki delik sayısıni giriniz. Diskteki delik sayısının yanlış girilmesi hatalı ekime sebep olacaktır.",
+        "number-of-unit": "Ünite sayısının  hatalı girilmesi ekilen alan sonuçlarının hatalı olmasına neden olur.",
+        "distance-between-units": "Ünite arası mesafenin hatalı girilmesi ekilen alan sonuçlarının hatalı olmasına neden olur.",
+        "target-fertilizer-weight": "Gübre ağırlığının yanlış girilmesi, hektar başına uygulanacak gübre miktarının yanlış hesaplanmasına neden olacaktır.",
+        "tolerance": "Mikro Granül gübre miktarının tolerans oranını belirler, çok hassas çalışılması sonucun yanlış çıkmasına neden olabilir.",
+        "wheel-diameter": "Tekerlek çapı değerinin yanlış girilmesi, gösterilen alan bilgisinin hatalı olmasına neden olur.",
+        "number-of-signals": "Bir turda oluşan sinyal sayısının yanlış girilmesi tüm sonuçların yanlış olmasına neden olur. Örnek: Tekerlek sensörü tekerleğe bağlı 4 cıvata görüyorsa, 1 turda oluşan sinyal sayısını 4 yapmanız gerekecektir."
+    },
+    "validations": {
+        "required": "Değer girilmesi zorunludur.",
+        "disc-hole-number": "Yanlış değer",
+        "distance-between-seeds": "Değer 4 cm - 90 cm arasında olabilir",
+        "number-of-unit": "Değer 2 ile 12 arasında olabilir",
+        "distance-between-units": "Değer 45 cm ile 90 cm arasında olabilir",
+        "target-fertilizer-weight": "Değer 5.000 Kg/Ha ile 80.000 Kg/Ha arasında olabilir",
+        "tolerance": "Değer %0,01 ile %99,9 arasında olabilir",
+        "wheel-diameter": "Değer 35 cm ile 120 cm arasında olabilir",
+        "number-of-signals": "Değer 1 ile 10 arasında olabilir"
+    },
+    "seed-calibration-page": {
+        "wheel-tour-count": "Teker Tur Sayısı",
+        "dust-ratio": "Toz Oranı",
+        "dust": "Toz",
+        "light": "Işık",
+        "error": "Hata",
+        "row": "Ünite",
+        "row-reset-button": "Değerleri Sıfırla",
+        "row-reset": {
+            "title": "DİKKAT!",
+            "description": "Ünite sıfırlanacak... <br/> 3-2-1"
+        },
+        "ok": "Tamam"
+    },
+    "fertilizer-calibration-page": {
+        "tour": "TUR",
+        "start-test": "Teste Başla",
+        "cancel": "İptal",
+        "fertilizer-weight": "Gübre Birimi",
+        "test-section": "Test Bölümü",
+        "target-showing-speed": "Hedef Ekim Hızı (Km)",
+        "target-fertilizer-per-hectar": "Hedef Gübre Miktarı (Kg/Hektar)",
+        "result":"Sonuç",
+        "next":"Sonraki",
+        "ok":"Tamam"
+    },
+    "working-statistics": {
+        "working-statistics": "Çalışma İstatistikleri",
+        "total-working-time": "Toplam Çalışma Zamanı",
+        "working-time": "Çalışma Zamanı",
+        "hour": "Saat",
+        "total-distance": "Toplam Mesafe",
+        "distance": "Mesafe",
+        "reset": "Sıfırla",
+        "title": "DİKKAT!",
+        "message": "Çalışma istatistikleri sıfırlanacak...<br/> 3-2-1",
+        "ok": "Tamam"
+    },
+    "area-info": {
+        "total-calculated-area": "Toplam Ekilen Alan",
+        "partial-area": "Parsiyel Ekilen Alan",
+        "area-reset-button": "Alan Sıfırlama",
+        "title": "DİKKAT!",
+        "message": "Ekim değerleri sıfırlanacak...<br/> 3-2-1",
+        "ok": "Tamam"
+    },
+    "success": "Tamam",
+    "changes-saved": "Değişiklikler başarıyla kaydedildi",
+    "ok":"Tamam"
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="katman_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 56 62" style="enable-background:new 0 0 56 62;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill:none;stroke:#1D1E1B;stroke-width:4;stroke-miterlimit:22.926;}
+	
+		.st1{clip-path:url(#SVGID_2_);fill:none;stroke:#1D1E1B;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.926;}
+	.st2{fill:none;stroke:#1D1E1B;stroke-miterlimit:22.926;}
+	.st3{clip-path:url(#SVGID_4_);fill:none;stroke:#1D1E1B;stroke-width:2;stroke-miterlimit:22.926;}
+	.st4{clip-path:url(#SVGID_4_);fill:none;stroke:#1D1E1B;stroke-miterlimit:22.926;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="0.81" y="15.15" width="55.19" height="37.21"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<polyline class="st0" points="30.02,52.11 32.16,43.18 32.96,35.67 	"/>
+	<polyline class="st1" points="39.39,42.96 41.66,43.1 43.39,42.89 45.69,41.99 48.89,39.58 51.46,36.3 52.89,34.66 54.43,33.32 
+		55.46,32.65 51.89,31.38 49.09,30.55 46.93,30.21 43.96,30.21 41.76,30.68 39.43,32.02 37.79,33.22 36.06,35.26 35.16,37.31 
+		34.76,39.25 33.76,40.05 33.19,41.66 33.42,43.98 34.42,41.51 35.29,41.31 36.56,41.98 38.19,42.69 39.39,42.96 	"/>
+</g>
+<path class="st2" d="M35.06,40.05l2.1-2.68l2.1-1.57l2.23-1.51l2.53-1.14l2.53-0.74l3.43-0.17 M36.84,37.78l1.89-0.14l1.07,0.03
+	l1.97,0.64l1.57,1.04 M40.38,35.05L43.06,35l1.93,0.07l1.93,0.4 M46.56,32.42l2.87,0.37l1.93,0.47l1.17,0.47"/>
+<g>
+	<defs>
+		<rect id="SVGID_3_" x="0.81" y="15.15" width="55.19" height="37.21"/>
+	</defs>
+	<clipPath id="SVGID_4_">
+		<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+	</clipPath>
+	<polygon class="st3" points="31.99,46.47 32.12,44.74 32.04,43.67 31.42,43.26 30.92,43.03 30.96,38.78 30.62,35.44 29.56,30.78 
+		26.29,25.11 22.76,21.45 18.89,18.98 14.96,17.45 9.09,15.98 1.63,15.71 2.1,16.85 3.23,18.85 3.96,22.45 5.49,27.98 7.29,33.51 
+		9.43,38.24 13.23,42.51 17.43,44.84 22.29,45.91 27.49,45.71 29.42,45.31 30.02,45.71 30.02,48.57 	"/>
+	<path class="st4" d="M1.63,15.71l5.07,3.33l3.87,4l3.93,4.6l3.13,4.13l3.2,4.53l3.3,3.74l3.27,2.51 M12.92,21.78l0.44,1.67
+		l-0.28,2.55l-2.46-1.07l-2.57-1.94 M16.99,22.51l0.23,1.47l0,3.06l-0.15,4.01l-2.36-1.01l-3.83-2.38L9.22,26.9 M22.23,25.45
+		l0.2,3.4l-0.4,3.13l-1.45,3.98l-3.55-1.52l-3.73-1.53l-2.93-0.67 M26.62,28.31l-0.4,4.07l-0.73,3.6l-1.6,3.8l-4.39-0.74l-3.33-0.53
+		 M20.56,42.58l6.83-0.02l1.77-2.65l0.2-3.6"/>
+</g>
+</svg>

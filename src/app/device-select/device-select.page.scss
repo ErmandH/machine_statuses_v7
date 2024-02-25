@@ -1,0 +1,21 @@
+.item-container{
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+.item-name{
+	color: black;
+	font-size: 1.8rem;
+}
+.item-id{
+	font-size: 1.2rem;
+}
+.item-button{
+	border-radius: 0.8rem;
+}
+.id{
+	font-weight: 500;
+}
+.toolbar-title{
+	padding-left: 0;
+}

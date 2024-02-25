@@ -8,6 +8,7 @@
  * For more information on global stylesheets, visit the documentation:
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
+ @use "./assets/flag-icons/flag-icons.min.css";
 
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
@@ -24,3 +25,1795 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+
+ion-icon {
+    .fib {
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        -webkit-mask-position: 50% 50%;
+        -webkit-mask-repeat: no-repeat;
+    }
+    .fi {
+        -webkit-mask-size: contain;
+        -webkit-mask-position: 50% 50%;
+        -webkit-mask-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        position: relative;
+        display: inline-block;
+        width: 1.33333333em;
+        line-height: 1em
+    }
+    .fi:before {
+        content: '\00a0'
+    }
+    .fi.fis {
+        width: 1em
+    }
+    .fi-xx {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/xx.svg)
+    }
+    .fi-xx.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/xx.svg)
+    }
+    .fi-ad {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ad.svg)
+    }
+    .fi-ad.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ad.svg)
+    }
+    .fi-ae {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ae.svg)
+    }
+    .fi-ae.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ae.svg)
+    }
+    .fi-af {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/af.svg)
+    }
+    .fi-af.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/af.svg)
+    }
+    .fi-ag {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ag.svg)
+    }
+    .fi-ag.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ag.svg)
+    }
+    .fi-ai {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ai.svg)
+    }
+    .fi-ai.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ai.svg)
+    }
+    .fi-al {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/al.svg)
+    }
+    .fi-al.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/al.svg)
+    }
+    .fi-am {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/am.svg)
+    }
+    .fi-am.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/am.svg)
+    }
+    .fi-ao {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ao.svg)
+    }
+    .fi-ao.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ao.svg)
+    }
+    .fi-aq {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/aq.svg)
+    }
+    .fi-aq.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/aq.svg)
+    }
+    .fi-ar {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ar.svg)
+    }
+    .fi-ar.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ar.svg)
+    }
+    .fi-as {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/as.svg)
+    }
+    .fi-as.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/as.svg)
+    }
+    .fi-at {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/at.svg)
+    }
+    .fi-at.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/at.svg)
+    }
+    .fi-au {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/au.svg)
+    }
+    .fi-au.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/au.svg)
+    }
+    .fi-aw {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/aw.svg)
+    }
+    .fi-aw.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/aw.svg)
+    }
+    .fi-ax {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ax.svg)
+    }
+    .fi-ax.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ax.svg)
+    }
+    .fi-az {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/az.svg)
+    }
+    .fi-az.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/az.svg)
+    }
+    .fi-ba {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ba.svg)
+    }
+    .fi-ba.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ba.svg)
+    }
+    .fi-bb {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bb.svg)
+    }
+    .fi-bb.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bb.svg)
+    }
+    .fi-bd {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bd.svg)
+    }
+    .fi-bd.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bd.svg)
+    }
+    .fi-be {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/be.svg)
+    }
+    .fi-be.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/be.svg)
+    }
+    .fi-bf {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bf.svg)
+    }
+    .fi-bf.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bf.svg)
+    }
+    .fi-bg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bg.svg)
+    }
+    .fi-bg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bg.svg)
+    }
+    .fi-bh {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bh.svg)
+    }
+    .fi-bh.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bh.svg)
+    }
+    .fi-bi {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bi.svg)
+    }
+    .fi-bi.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bi.svg)
+    }
+    .fi-bj {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bj.svg)
+    }
+    .fi-bj.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bj.svg)
+    }
+    .fi-bl {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bl.svg)
+    }
+    .fi-bl.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bl.svg)
+    }
+    .fi-bm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bm.svg)
+    }
+    .fi-bm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bm.svg)
+    }
+    .fi-bn {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bn.svg)
+    }
+    .fi-bn.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bn.svg)
+    }
+    .fi-bo {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bo.svg)
+    }
+    .fi-bo.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bo.svg)
+    }
+    .fi-bq {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bq.svg)
+    }
+    .fi-bq.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bq.svg)
+    }
+    .fi-br {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/br.svg)
+    }
+    .fi-br.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/br.svg)
+    }
+    .fi-bs {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bs.svg)
+    }
+    .fi-bs.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bs.svg)
+    }
+    .fi-bt {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bt.svg)
+    }
+    .fi-bt.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bt.svg)
+    }
+    .fi-bv {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bv.svg)
+    }
+    .fi-bv.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bv.svg)
+    }
+    .fi-bw {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bw.svg)
+    }
+    .fi-bw.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bw.svg)
+    }
+    .fi-by {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/by.svg)
+    }
+    .fi-by.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/by.svg)
+    }
+    .fi-bz {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/bz.svg)
+    }
+    .fi-bz.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/bz.svg)
+    }
+    .fi-ca {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ca.svg)
+    }
+    .fi-ca.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ca.svg)
+    }
+    .fi-cc {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cc.svg)
+    }
+    .fi-cc.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cc.svg)
+    }
+    .fi-cd {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cd.svg)
+    }
+    .fi-cd.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cd.svg)
+    }
+    .fi-cf {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cf.svg)
+    }
+    .fi-cf.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cf.svg)
+    }
+    .fi-cg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cg.svg)
+    }
+    .fi-cg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cg.svg)
+    }
+    .fi-ch {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ch.svg)
+    }
+    .fi-ch.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ch.svg)
+    }
+    .fi-ci {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ci.svg)
+    }
+    .fi-ci.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ci.svg)
+    }
+    .fi-ck {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ck.svg)
+    }
+    .fi-ck.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ck.svg)
+    }
+    .fi-cl {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cl.svg)
+    }
+    .fi-cl.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cl.svg)
+    }
+    .fi-cm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cm.svg)
+    }
+    .fi-cm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cm.svg)
+    }
+    .fi-cn {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cn.svg)
+    }
+    .fi-cn.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cn.svg)
+    }
+    .fi-co {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/co.svg)
+    }
+    .fi-co.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/co.svg)
+    }
+    .fi-cr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cr.svg)
+    }
+    .fi-cr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cr.svg)
+    }
+    .fi-cu {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cu.svg)
+    }
+    .fi-cu.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cu.svg)
+    }
+    .fi-cv {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cv.svg)
+    }
+    .fi-cv.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cv.svg)
+    }
+    .fi-cw {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cw.svg)
+    }
+    .fi-cw.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cw.svg)
+    }
+    .fi-cx {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cx.svg)
+    }
+    .fi-cx.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cx.svg)
+    }
+    .fi-cy {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cy.svg)
+    }
+    .fi-cy.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cy.svg)
+    }
+    .fi-cz {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cz.svg)
+    }
+    .fi-cz.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cz.svg)
+    }
+    .fi-de {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/de.svg)
+    }
+    .fi-de.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/de.svg)
+    }
+    .fi-dj {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/dj.svg)
+    }
+    .fi-dj.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/dj.svg)
+    }
+    .fi-dk {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/dk.svg)
+    }
+    .fi-dk.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/dk.svg)
+    }
+    .fi-dm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/dm.svg)
+    }
+    .fi-dm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/dm.svg)
+    }
+    .fi-do {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/do.svg)
+    }
+    .fi-do.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/do.svg)
+    }
+    .fi-dz {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/dz.svg)
+    }
+    .fi-dz.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/dz.svg)
+    }
+    .fi-ec {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ec.svg)
+    }
+    .fi-ec.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ec.svg)
+    }
+    .fi-ee {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ee.svg)
+    }
+    .fi-ee.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ee.svg)
+    }
+    .fi-eg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/eg.svg)
+    }
+    .fi-eg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/eg.svg)
+    }
+    .fi-eh {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/eh.svg)
+    }
+    .fi-eh.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/eh.svg)
+    }
+    .fi-er {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/er.svg)
+    }
+    .fi-er.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/er.svg)
+    }
+    .fi-es {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/es.svg)
+    }
+    .fi-es.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/es.svg)
+    }
+    .fi-et {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/et.svg)
+    }
+    .fi-et.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/et.svg)
+    }
+    .fi-fi {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/fi.svg)
+    }
+    .fi-fi.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/fi.svg)
+    }
+    .fi-fj {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/fj.svg)
+    }
+    .fi-fj.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/fj.svg)
+    }
+    .fi-fk {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/fk.svg)
+    }
+    .fi-fk.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/fk.svg)
+    }
+    .fi-fm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/fm.svg)
+    }
+    .fi-fm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/fm.svg)
+    }
+    .fi-fo {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/fo.svg)
+    }
+    .fi-fo.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/fo.svg)
+    }
+    .fi-fr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/fr.svg)
+    }
+    .fi-fr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/fr.svg)
+    }
+    .fi-ga {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ga.svg)
+    }
+    .fi-ga.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ga.svg)
+    }
+    .fi-gb {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gb.svg)
+    }
+    .fi-gb.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gb.svg)
+    }
+    .fi-gd {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gd.svg)
+    }
+    .fi-gd.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gd.svg)
+    }
+    .fi-ge {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ge.svg)
+    }
+    .fi-ge.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ge.svg)
+    }
+    .fi-gf {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gf.svg)
+    }
+    .fi-gf.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gf.svg)
+    }
+    .fi-gg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gg.svg)
+    }
+    .fi-gg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gg.svg)
+    }
+    .fi-gh {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gh.svg)
+    }
+    .fi-gh.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gh.svg)
+    }
+    .fi-gi {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gi.svg)
+    }
+    .fi-gi.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gi.svg)
+    }
+    .fi-gl {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gl.svg)
+    }
+    .fi-gl.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gl.svg)
+    }
+    .fi-gm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gm.svg)
+    }
+    .fi-gm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gm.svg)
+    }
+    .fi-gn {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gn.svg)
+    }
+    .fi-gn.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gn.svg)
+    }
+    .fi-gp {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gp.svg)
+    }
+    .fi-gp.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gp.svg)
+    }
+    .fi-gq {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gq.svg)
+    }
+    .fi-gq.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gq.svg)
+    }
+    .fi-gr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gr.svg)
+    }
+    .fi-gr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gr.svg)
+    }
+    .fi-gs {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gs.svg)
+    }
+    .fi-gs.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gs.svg)
+    }
+    .fi-gt {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gt.svg)
+    }
+    .fi-gt.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gt.svg)
+    }
+    .fi-gu {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gu.svg)
+    }
+    .fi-gu.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gu.svg)
+    }
+    .fi-gw {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gw.svg)
+    }
+    .fi-gw.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gw.svg)
+    }
+    .fi-gy {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gy.svg)
+    }
+    .fi-gy.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gy.svg)
+    }
+    .fi-hk {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/hk.svg)
+    }
+    .fi-hk.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/hk.svg)
+    }
+    .fi-hm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/hm.svg)
+    }
+    .fi-hm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/hm.svg)
+    }
+    .fi-hn {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/hn.svg)
+    }
+    .fi-hn.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/hn.svg)
+    }
+    .fi-hr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/hr.svg)
+    }
+    .fi-hr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/hr.svg)
+    }
+    .fi-ht {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ht.svg)
+    }
+    .fi-ht.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ht.svg)
+    }
+    .fi-hu {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/hu.svg)
+    }
+    .fi-hu.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/hu.svg)
+    }
+    .fi-id {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/id.svg)
+    }
+    .fi-id.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/id.svg)
+    }
+    .fi-ie {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ie.svg)
+    }
+    .fi-ie.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ie.svg)
+    }
+    .fi-il {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/il.svg)
+    }
+    .fi-il.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/il.svg)
+    }
+    .fi-im {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/im.svg)
+    }
+    .fi-im.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/im.svg)
+    }
+    .fi-in {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/in.svg)
+    }
+    .fi-in.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/in.svg)
+    }
+    .fi-io {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/io.svg)
+    }
+    .fi-io.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/io.svg)
+    }
+    .fi-iq {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/iq.svg)
+    }
+    .fi-iq.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/iq.svg)
+    }
+    .fi-ir {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ir.svg)
+    }
+    .fi-ir.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ir.svg)
+    }
+    .fi-is {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/is.svg)
+    }
+    .fi-is.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/is.svg)
+    }
+    .fi-it {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/it.svg)
+    }
+    .fi-it.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/it.svg)
+    }
+    .fi-je {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/je.svg)
+    }
+    .fi-je.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/je.svg)
+    }
+    .fi-jm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/jm.svg)
+    }
+    .fi-jm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/jm.svg)
+    }
+    .fi-jo {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/jo.svg)
+    }
+    .fi-jo.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/jo.svg)
+    }
+    .fi-jp {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/jp.svg)
+    }
+    .fi-jp.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/jp.svg)
+    }
+    .fi-ke {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ke.svg)
+    }
+    .fi-ke.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ke.svg)
+    }
+    .fi-kg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/kg.svg)
+    }
+    .fi-kg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/kg.svg)
+    }
+    .fi-kh {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/kh.svg)
+    }
+    .fi-kh.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/kh.svg)
+    }
+    .fi-ki {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ki.svg)
+    }
+    .fi-ki.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ki.svg)
+    }
+    .fi-km {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/km.svg)
+    }
+    .fi-km.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/km.svg)
+    }
+    .fi-kn {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/kn.svg)
+    }
+    .fi-kn.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/kn.svg)
+    }
+    .fi-kp {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/kp.svg)
+    }
+    .fi-kp.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/kp.svg)
+    }
+    .fi-kr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/kr.svg)
+    }
+    .fi-kr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/kr.svg)
+    }
+    .fi-kw {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/kw.svg)
+    }
+    .fi-kw.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/kw.svg)
+    }
+    .fi-ky {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ky.svg)
+    }
+    .fi-ky.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ky.svg)
+    }
+    .fi-kz {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/kz.svg)
+    }
+    .fi-kz.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/kz.svg)
+    }
+    .fi-la {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/la.svg)
+    }
+    .fi-la.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/la.svg)
+    }
+    .fi-lb {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/lb.svg)
+    }
+    .fi-lb.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/lb.svg)
+    }
+    .fi-lc {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/lc.svg)
+    }
+    .fi-lc.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/lc.svg)
+    }
+    .fi-li {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/li.svg)
+    }
+    .fi-li.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/li.svg)
+    }
+    .fi-lk {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/lk.svg)
+    }
+    .fi-lk.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/lk.svg)
+    }
+    .fi-lr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/lr.svg)
+    }
+    .fi-lr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/lr.svg)
+    }
+    .fi-ls {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ls.svg)
+    }
+    .fi-ls.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ls.svg)
+    }
+    .fi-lt {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/lt.svg)
+    }
+    .fi-lt.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/lt.svg)
+    }
+    .fi-lu {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/lu.svg)
+    }
+    .fi-lu.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/lu.svg)
+    }
+    .fi-lv {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/lv.svg)
+    }
+    .fi-lv.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/lv.svg)
+    }
+    .fi-ly {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ly.svg)
+    }
+    .fi-ly.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ly.svg)
+    }
+    .fi-ma {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ma.svg)
+    }
+    .fi-ma.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ma.svg)
+    }
+    .fi-mc {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mc.svg)
+    }
+    .fi-mc.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mc.svg)
+    }
+    .fi-md {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/md.svg)
+    }
+    .fi-md.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/md.svg)
+    }
+    .fi-me {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/me.svg)
+    }
+    .fi-me.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/me.svg)
+    }
+    .fi-mf {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mf.svg)
+    }
+    .fi-mf.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mf.svg)
+    }
+    .fi-mg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mg.svg)
+    }
+    .fi-mg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mg.svg)
+    }
+    .fi-mh {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mh.svg)
+    }
+    .fi-mh.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mh.svg)
+    }
+    .fi-mk {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mk.svg)
+    }
+    .fi-mk.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mk.svg)
+    }
+    .fi-ml {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ml.svg)
+    }
+    .fi-ml.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ml.svg)
+    }
+    .fi-mm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mm.svg)
+    }
+    .fi-mm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mm.svg)
+    }
+    .fi-mn {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mn.svg)
+    }
+    .fi-mn.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mn.svg)
+    }
+    .fi-mo {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mo.svg)
+    }
+    .fi-mo.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mo.svg)
+    }
+    .fi-mp {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mp.svg)
+    }
+    .fi-mp.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mp.svg)
+    }
+    .fi-mq {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mq.svg)
+    }
+    .fi-mq.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mq.svg)
+    }
+    .fi-mr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mr.svg)
+    }
+    .fi-mr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mr.svg)
+    }
+    .fi-ms {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ms.svg)
+    }
+    .fi-ms.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ms.svg)
+    }
+    .fi-mt {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mt.svg)
+    }
+    .fi-mt.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mt.svg)
+    }
+    .fi-mu {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mu.svg)
+    }
+    .fi-mu.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mu.svg)
+    }
+    .fi-mv {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mv.svg)
+    }
+    .fi-mv.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mv.svg)
+    }
+    .fi-mw {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mw.svg)
+    }
+    .fi-mw.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mw.svg)
+    }
+    .fi-mx {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mx.svg)
+    }
+    .fi-mx.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mx.svg)
+    }
+    .fi-my {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/my.svg)
+    }
+    .fi-my.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/my.svg)
+    }
+    .fi-mz {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/mz.svg)
+    }
+    .fi-mz.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/mz.svg)
+    }
+    .fi-na {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/na.svg)
+    }
+    .fi-na.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/na.svg)
+    }
+    .fi-nc {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/nc.svg)
+    }
+    .fi-nc.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/nc.svg)
+    }
+    .fi-ne {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ne.svg)
+    }
+    .fi-ne.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ne.svg)
+    }
+    .fi-nf {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/nf.svg)
+    }
+    .fi-nf.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/nf.svg)
+    }
+    .fi-ng {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ng.svg)
+    }
+    .fi-ng.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ng.svg)
+    }
+    .fi-ni {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ni.svg)
+    }
+    .fi-ni.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ni.svg)
+    }
+    .fi-nl {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/nl.svg)
+    }
+    .fi-nl.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/nl.svg)
+    }
+    .fi-no {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/no.svg)
+    }
+    .fi-no.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/no.svg)
+    }
+    .fi-np {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/np.svg)
+    }
+    .fi-np.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/np.svg)
+    }
+    .fi-nr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/nr.svg)
+    }
+    .fi-nr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/nr.svg)
+    }
+    .fi-nu {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/nu.svg)
+    }
+    .fi-nu.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/nu.svg)
+    }
+    .fi-nz {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/nz.svg)
+    }
+    .fi-nz.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/nz.svg)
+    }
+    .fi-om {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/om.svg)
+    }
+    .fi-om.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/om.svg)
+    }
+    .fi-pa {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pa.svg)
+    }
+    .fi-pa.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pa.svg)
+    }
+    .fi-pe {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pe.svg)
+    }
+    .fi-pe.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pe.svg)
+    }
+    .fi-pf {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pf.svg)
+    }
+    .fi-pf.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pf.svg)
+    }
+    .fi-pg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pg.svg)
+    }
+    .fi-pg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pg.svg)
+    }
+    .fi-ph {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ph.svg)
+    }
+    .fi-ph.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ph.svg)
+    }
+    .fi-pk {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pk.svg)
+    }
+    .fi-pk.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pk.svg)
+    }
+    .fi-pl {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pl.svg)
+    }
+    .fi-pl.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pl.svg)
+    }
+    .fi-pm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pm.svg)
+    }
+    .fi-pm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pm.svg)
+    }
+    .fi-pn {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pn.svg)
+    }
+    .fi-pn.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pn.svg)
+    }
+    .fi-pr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pr.svg)
+    }
+    .fi-pr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pr.svg)
+    }
+    .fi-ps {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ps.svg)
+    }
+    .fi-ps.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ps.svg)
+    }
+    .fi-pt {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pt.svg)
+    }
+    .fi-pt.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pt.svg)
+    }
+    .fi-pw {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/pw.svg)
+    }
+    .fi-pw.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/pw.svg)
+    }
+    .fi-py {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/py.svg)
+    }
+    .fi-py.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/py.svg)
+    }
+    .fi-qa {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/qa.svg)
+    }
+    .fi-qa.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/qa.svg)
+    }
+    .fi-re {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/re.svg)
+    }
+    .fi-re.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/re.svg)
+    }
+    .fi-ro {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ro.svg)
+    }
+    .fi-ro.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ro.svg)
+    }
+    .fi-rs {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/rs.svg)
+    }
+    .fi-rs.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/rs.svg)
+    }
+    .fi-ru {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ru.svg)
+    }
+    .fi-ru.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ru.svg)
+    }
+    .fi-rw {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/rw.svg)
+    }
+    .fi-rw.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/rw.svg)
+    }
+    .fi-sa {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sa.svg)
+    }
+    .fi-sa.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sa.svg)
+    }
+    .fi-sb {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sb.svg)
+    }
+    .fi-sb.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sb.svg)
+    }
+    .fi-sc {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sc.svg)
+    }
+    .fi-sc.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sc.svg)
+    }
+    .fi-sd {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sd.svg)
+    }
+    .fi-sd.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sd.svg)
+    }
+    .fi-se {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/se.svg)
+    }
+    .fi-se.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/se.svg)
+    }
+    .fi-sg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sg.svg)
+    }
+    .fi-sg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sg.svg)
+    }
+    .fi-sh {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sh.svg)
+    }
+    .fi-sh.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sh.svg)
+    }
+    .fi-si {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/si.svg)
+    }
+    .fi-si.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/si.svg)
+    }
+    .fi-sj {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sj.svg)
+    }
+    .fi-sj.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sj.svg)
+    }
+    .fi-sk {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sk.svg)
+    }
+    .fi-sk.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sk.svg)
+    }
+    .fi-sl {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sl.svg)
+    }
+    .fi-sl.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sl.svg)
+    }
+    .fi-sm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sm.svg)
+    }
+    .fi-sm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sm.svg)
+    }
+    .fi-sn {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sn.svg)
+    }
+    .fi-sn.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sn.svg)
+    }
+    .fi-so {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/so.svg)
+    }
+    .fi-so.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/so.svg)
+    }
+    .fi-sr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sr.svg)
+    }
+    .fi-sr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sr.svg)
+    }
+    .fi-ss {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ss.svg)
+    }
+    .fi-ss.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ss.svg)
+    }
+    .fi-st {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/st.svg)
+    }
+    .fi-st.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/st.svg)
+    }
+    .fi-sv {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sv.svg)
+    }
+    .fi-sv.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sv.svg)
+    }
+    .fi-sx {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sx.svg)
+    }
+    .fi-sx.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sx.svg)
+    }
+    .fi-sy {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sy.svg)
+    }
+    .fi-sy.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sy.svg)
+    }
+    .fi-sz {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/sz.svg)
+    }
+    .fi-sz.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/sz.svg)
+    }
+    .fi-tc {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tc.svg)
+    }
+    .fi-tc.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tc.svg)
+    }
+    .fi-td {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/td.svg)
+    }
+    .fi-td.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/td.svg)
+    }
+    .fi-tf {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tf.svg)
+    }
+    .fi-tf.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tf.svg)
+    }
+    .fi-tg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tg.svg)
+    }
+    .fi-tg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tg.svg)
+    }
+    .fi-th {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/th.svg)
+    }
+    .fi-th.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/th.svg)
+    }
+    .fi-tj {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tj.svg)
+    }
+    .fi-tj.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tj.svg)
+    }
+    .fi-tk {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tk.svg)
+    }
+    .fi-tk.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tk.svg)
+    }
+    .fi-tl {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tl.svg)
+    }
+    .fi-tl.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tl.svg)
+    }
+    .fi-tm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tm.svg)
+    }
+    .fi-tm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tm.svg)
+    }
+    .fi-tn {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tn.svg)
+    }
+    .fi-tn.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tn.svg)
+    }
+    .fi-to {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/to.svg)
+    }
+    .fi-to.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/to.svg)
+    }
+    .fi-tr {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tr.svg)
+    }
+    .fi-tr.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tr.svg)
+    }
+    .fi-tt {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tt.svg)
+    }
+    .fi-tt.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tt.svg)
+    }
+    .fi-tv {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tv.svg)
+    }
+    .fi-tv.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tv.svg)
+    }
+    .fi-tw {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tw.svg)
+    }
+    .fi-tw.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tw.svg)
+    }
+    .fi-tz {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/tz.svg)
+    }
+    .fi-tz.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/tz.svg)
+    }
+    .fi-ua {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ua.svg)
+    }
+    .fi-ua.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ua.svg)
+    }
+    .fi-ug {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ug.svg)
+    }
+    .fi-ug.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ug.svg)
+    }
+    .fi-um {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/um.svg)
+    }
+    .fi-um.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/um.svg)
+    }
+    .fi-us {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/us.svg)
+    }
+    .fi-us.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/us.svg)
+    }
+    .fi-uy {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/uy.svg)
+    }
+    .fi-uy.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/uy.svg)
+    }
+    .fi-uz {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/uz.svg)
+    }
+    .fi-uz.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/uz.svg)
+    }
+    .fi-va {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/va.svg)
+    }
+    .fi-va.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/va.svg)
+    }
+    .fi-vc {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/vc.svg)
+    }
+    .fi-vc.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/vc.svg)
+    }
+    .fi-ve {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ve.svg)
+    }
+    .fi-ve.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ve.svg)
+    }
+    .fi-vg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/vg.svg)
+    }
+    .fi-vg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/vg.svg)
+    }
+    .fi-vi {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/vi.svg)
+    }
+    .fi-vi.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/vi.svg)
+    }
+    .fi-vn {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/vn.svg)
+    }
+    .fi-vn.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/vn.svg)
+    }
+    .fi-vu {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/vu.svg)
+    }
+    .fi-vu.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/vu.svg)
+    }
+    .fi-wf {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/wf.svg)
+    }
+    .fi-wf.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/wf.svg)
+    }
+    .fi-ws {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ws.svg)
+    }
+    .fi-ws.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ws.svg)
+    }
+    .fi-ye {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ye.svg)
+    }
+    .fi-ye.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ye.svg)
+    }
+    .fi-yt {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/yt.svg)
+    }
+    .fi-yt.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/yt.svg)
+    }
+    .fi-za {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/za.svg)
+    }
+    .fi-za.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/za.svg)
+    }
+    .fi-zm {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/zm.svg)
+    }
+    .fi-zm.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/zm.svg)
+    }
+    .fi-zw {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/zw.svg)
+    }
+    .fi-zw.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/zw.svg)
+    }
+    .fi-ac {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ac.svg)
+    }
+    .fi-ac.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ac.svg)
+    }
+    .fi-cefta {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cefta.svg)
+    }
+    .fi-cefta.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cefta.svg)
+    }
+    .fi-cp {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/cp.svg)
+    }
+    .fi-cp.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/cp.svg)
+    }
+    .fi-dg {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/dg.svg)
+    }
+    .fi-dg.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/dg.svg)
+    }
+    .fi-ea {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ea.svg)
+    }
+    .fi-ea.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ea.svg)
+    }
+    .fi-es-ct {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/es-ct.svg)
+    }
+    .fi-es-ct.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/es-ct.svg)
+    }
+    .fi-es-ga {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/es-ga.svg)
+    }
+    .fi-es-ga.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/es-ga.svg)
+    }
+    .fi-es-pv {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/es-pv.svg)
+    }
+    .fi-es-pv.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/es-pv.svg)
+    }
+    .fi-eu {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/eu.svg)
+    }
+    .fi-eu.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/eu.svg)
+    }
+    .fi-gb-eng {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gb-eng.svg)
+    }
+    .fi-gb-eng.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gb-eng.svg)
+    }
+    .fi-gb-nir {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gb-nir.svg)
+    }
+    .fi-gb-nir.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gb-nir.svg)
+    }
+    .fi-gb-sct {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gb-sct.svg)
+    }
+    .fi-gb-sct.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gb-sct.svg)
+    }
+    .fi-gb-wls {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/gb-wls.svg)
+    }
+    .fi-gb-wls.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/gb-wls.svg)
+    }
+    .fi-ic {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ic.svg)
+    }
+    .fi-ic.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ic.svg)
+    }
+    .fi-ta {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/ta.svg)
+    }
+    .fi-ta.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/ta.svg)
+    }
+    .fi-un {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/un.svg)
+    }
+    .fi-un.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/un.svg)
+    }
+    .fi-xk {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/4x3/xk.svg)
+    }
+    .fi-xk.fis {
+        -webkit-mask-image: url(.//assets/flag-icons/flags/1x1/xk.svg)
+    }
+}
+
+.head-informations,
+.footer-informations {
+  margin: auto;
+  button,
+  img {
+      margin-left: 3em;
+      text-align: center;
+  }
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: end;
+}
+
+.flex{
+    display: flex;
+}
+
+.align-center{ align-items: center; }
+
+.justify-center{ justify-content: center; }
+.flex-column { flex-direction: column; }
+.justify-between{ justify-content: space-between; }
+.justify-around{ justify-content: space-around; }
+
+.bg-blue{
+    .bg-primary {
+        background: var(--ion-color-primary);
+    }
+};
+
+.area-reset-alert .alert-wrapper,
+.row-reset-alert .alert-wrapper
+{
+    background-color: var(--ion-color-light) ;
+    color: var(--ion-color-primary);
+    border-radius: 15px;
+}
+
+.area-reset-alert .alert-head,
+.row-reset-alert .alert-head
+{
+    text-align: center;
+}
+
+.area-reset-alert .alert-button-group,
+.row-reset-alert .alert-button-group
+{
+    display: flex;
+    justify-content: center;
+}
+
+.area-reset-alert .alert-button-group button,
+.row-reset-alert .alert-button-group button
+{
+    background-color: var(--ion-color-primary);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.text-dark-blue{
+    color: var(--ion-color-primary);
+}
+
+.text-error{
+    color: rgb(243, 32, 32);
+    font-weight: bold;
+}
+.text-muted{
+    color:#6c757d;
+}
+
+.old-unit{
+    color: #fff;
+    font-size: 16px;
+}
+
+// .unit{
+//     position: absolute;
+//     top: 48%;
+//     right: 0;
+//     transform: translateY(-50%);
+//     margin: 0!important;
+//     margin-right: 8px!important;
+//     font-size: 1.6rem;
+// }
+
+.unit{
+    position: absolute;
+    right: 0;
+}
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.area-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+.error-content{
+    align-self: flex-start;
+    padding-left: 16px;
+}
+
+.full-height{
+    height: 100%!important;
+}
+
+.bg-app-primary{
+    background-color: var(--ion-color-primary);
+}
+
+.no-padding{
+    padding: 0!important;
+}
+
+#settings {
+    background: var(--ion-color-primary);
+}
+
+.general-settings-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 15px;
+}
+
+.no-padding .scroll-content{
+    padding: 0!important;
+}
+.segment-button {
+    background-color: var(--ion-color-light)!important;
+    color: var(--ion-color-primary)!important;
+}
+#selectedSegment {
+    background-color: var(--ion-color-primary)!important;
+    color:var(--ion-color-light)!important;
+}
+
+
+.popover-content{
+    width: auto!important;
+    border-radius: 1.8rem!important;
+    padding: 1rem;
+    background-color: var(--ion-color-primary)!important;
+}

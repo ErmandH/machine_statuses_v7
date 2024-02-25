@@ -1,0 +1,133 @@
+{
+    "home": "Home",
+    "settings-page": "Settings",
+    "select-device": "Select Device",
+    "language": "Language",
+    "choose-language": "Choose Language",
+    "enable":"Enable",
+    "disable":"Disable",
+    "hectare": "Hectare",
+    "cancel": "Cancel",
+    "device-not-found":"No devices found",
+    "login":{
+        "sign-in":"SIGN IN",
+        "sign-up":"SIGN UP",
+        "or":"OR",
+        "forgot-password":"FORGOT PASSWORD",
+        "e-mail":"E-Mail",
+        "password":"Password"
+    },
+    "setting-tabs":{
+        "general":"General",
+        "general-fertilizer":"General Fertilizer",
+        "row-enable-disable":"Row Enable/Disable",
+        "granular-motor":"Granular Motor"
+    },
+    "settings":{
+        "general":{
+            "seed-control-period": "Seed Control Period",
+            "disc-hole-number": "Disc Hole Number",
+            "distance-between-seeds": "Distance Between Seeds",
+            "number-of-unit":"Number Of Unit",
+            "distance-between-units":"Distance Between Units",
+            "target-fertilizer-weight": "Target Fertilizer Weight",
+            "tolerance": "Tolerance",
+            "wheel-diameter": "Wheel Diameter",
+            "number-of-signals": "Number Of Signals In a Tour",
+            "seed-calibration":"SEED CALIBRATION",
+            "fertilizer-calibration":"FERTILIZER CALIBRATION",
+            "save": "SAVE"
+        },
+        "general-fertilizer":{
+            "fertilizer-start-torque": "Fertilizer Start Torque",
+            "fertilizer-calibration-rpm":"Fertilizer Calibration RPM",
+            "fertilizer-calibration-tour": "Fertilizer Calibration Tour",
+            "multiplier": "Multiplier",
+            "engine-signal-on-a-tour":"Engine Signal On a Tour",
+            "the-unit-of-seed-area-meause": "The Unit of Seed area measure",
+            "distance-rpm":"Distance RPM",
+            "engine-step":"Engine Step",
+            "warning-description": "Changing these values without consulting your manufacturer will cause the motor to spin incorrectly. Please do not change these values without specifying by your manufacturer.",
+            "restore-default-settings": "Restore Default Settings",
+            "title": "ATTENTION!",
+            "message": "Restoring to default settings...<br/> 3-2-1"
+        },
+        "row-enable-disable":{
+            "row-control": "Row Control"
+        },
+        "granular-motor":{
+            "motor":"Motor"
+        }
+    },
+    "tooltip":{
+            "seed-control-period": "According to the gear seƫng you have made on your seed drill, the distance between the seeds value you have set should also be entered here. The wrong value will give you a wrong warning on the device.",
+            "distance-between-seeds": "The distance over lines, which you have adjusted according to the gear setting you have made on your planter, must also be entered here. Wrong value gives you wrong warning on the display",
+            "disc-hole-number": "You must enter the correct number of holes in the seed disc that you mounted on the machine. Entering the wrong number of holes on the disc will cause incorrect planting.",
+            "number-of-unit":"Entering the numbers of units incorrectly will cause the sown area results to be incorrect",
+            "distance-between-units":"Entering the distance between units incorrectly will cause the sown area results to be incorrect",
+            "target-fertilizer-weight": "Incorrect entry of the fertilizer weight will cause the amount of fertilizer to be applied per hectare to be calculated incorrectly",
+            "tolerance": "Micro Granule determines the tolerance ratio of the amount of fertilizer, too sensitive work may cause the result to be wrong",
+            "wheel-diameter": "Incorrectly entering the whell diameter value causes the showed area information to be incorrect. Incorrect entry of the number of signals generated in a round will cause all the results to be incorrect",
+            "number-of-signals": "Incorrect entry of the number of signals generated in a round will cause all results to be incorrect. Example: If the wheel sensor sees 4 bolts attached to the wheel, you will need to make 4 the number of signals generated in 1 turn"
+    },
+    "validations":{
+        "required": "Field is required",
+        "disc-hole-number": "Wrong value",
+        "distance-between-seeds": "Value must be between 4cm and 90cm",
+        "number-of-unit":"Value must be between 2 and 12 and must be an integer",
+        "distance-between-units":"Value must be between 45cm and 90cm",
+        "target-fertilizer-weight": "Value must be between 5.000 Kg/ha and 80.000 Kg/ha",
+        "tolerance": "Value must be between %0.01 and %99.9",
+        "wheel-diameter": "Value must be between 35cm and 120cm",
+        "number-of-signals": "Value must be between 1 and 10 and must be an integer"
+    },
+    "seed-calibration-page":{
+        "wheel-tour-count": "Wheel Tour Count",
+        "dust-ratio": "Dust Ratio",
+        "dust": "Dust",
+        "light": "Light",
+        "error": "Error",
+        "row": "Row",
+        "row-reset-button": "Row Reset",
+        "row-reset":{
+            "title": "ATTENTION!",
+            "description": "Unite will be reset... <br/> 3-2-1"
+        },
+        "ok": "ok"
+    },
+    "fertilizer-calibration-page":{
+        "tour":"TOUR",
+        "start-test":"Start Test",
+        "cancel":"Cancel",
+        "fertilizer-weight": "Fertilizer Weight",
+        "test-section": "Test Section",
+        "target-showing-speed":"Target Showing Speed",
+        "target-fertilizer-per-hectar":"Target Fertilizer per Hectar",
+        "result":"Result",
+        "next":"Next",
+        "ok":"Ok"
+    },
+    "working-statistics":{
+        "working-statistics": "Working Statistics",
+        "total-working-time": "Total Working Time",
+        "working-time": "Working Time",
+        "hour": "Hour",
+        "total-distance":"Total Distance",
+        "distance":"Distance",
+        "reset": "Reset",
+        "title": "ATTENTION!",
+        "message": "Working statistics will be reset...<br/> 3-2-1",
+        "ok": "Ok"
+    },
+    "area-info":{
+        "total-calculated-area": "Total Calculated Area",
+        "partial-area": "Partial Area",
+        "area-reset-button": "Area Reset",
+        "title": "ATTENTION!",
+        "message": "Calculated area will be reset...<br/> 3-2-1",
+        "ok":"Ok"
+    },
+    "success": "SUCCESS",
+    "changes-saved": "Changes saved successfully",
+    "ok":"Ok"
+}
