@@ -29,22 +29,22 @@
 </ion-header> -->
 
 
-<ion-content padding id="settings">
-  <ion-grid style="height: 100%!important;"> 
-    <app-settings-general-fertilizer
->
-</app-settings-general-fertilizer>
+<ion-content class="ion-padding">
+  <ion-grid style="height: 100%!important;">
+    <app-settings-general-fertilizer>
+    </app-settings-general-fertilizer>
   </ion-grid>
 </ion-content>
 
 <ion-footer class="bg-app-primary">
   <div class="flex justify-center align-center py-1">
-    <ion-button (click)="showAlert()"  shape="round" color="light">
-        <ion-icon name="cog" slot="start"></ion-icon>
-        {{'settings.general-fertilizer.restore-default-settings' | translate}}
-      </ion-button>
-    <ion-button (click)="submitFertilizerSettings()" [disabled]="isFertilizerSaveButtonDisabled" shape="round" color="light" type="submit">
-            {{'settings.general.save' | translate}}
+    <ion-button (click)="showAlert()" shape="round" color="light">
+      <ion-icon name="cog" slot="start"></ion-icon>
+      {{'settings.general-fertilizer.restore-default-settings' | translate}}
     </ion-button>
-</div>
-</ion-footer> 
+    <ion-button (click)="submitFertilizerSettings()" [disabled]="isFertilizerSaveButtonDisabled" shape="round"
+      color="light" type="submit">
+      {{'settings.general.save' | translate}}
+    </ion-button>
+  </div>
+</ion-footer>

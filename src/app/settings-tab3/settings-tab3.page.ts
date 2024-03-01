@@ -11,23 +11,28 @@ import { loadMachineStatuses } from 'src/utils/loadMachineStatus';
   styleUrls: ['./settings-tab3.page.scss'],
 })
 export class SettingsTab3Page implements OnInit {
-
-  machineStatus: MachineStatus
+  machineStatus: MachineStatus;
   machineSettings: MachineSettings;
-  constructor(private router: Router,) {
-    
-  }
+  constructor(private router: Router) {}
+
+
   ngOnInit(): void {
-    this.machineSettings = loadMachineSettings()
-    this.machineStatus = loadMachineStatuses()
+    this.loadSettings()
   }
 
-  onToggleChange(event: any, machine: Machines,machineIndex: number) {
-    const settingsData = localStorage.getItem('settings').split(',')
-    settingsData[8 + machineIndex] = event.checked ? '1' : '0'
-    const settingsString = settingsData.join(',')
-    localStorage.setItem('settings', settingsString)
-    machine.show = event.checked
+  onToggleChange(event: any, machine: Machines, machineIndex: number) {
+    const settingsData = localStorage.getItem('settings').split(',');
+    settingsData[8 + machineIndex] = event.checked ? '1' : '0';
+    const settingsString = settingsData.join(',');
+    localStorage.setItem('settings', settingsString);
+    machine.show = event.checked;
+  }
+
+  loadSettings(){
+    this.machineSettings = loadMachineSettings();
+    this.machineStatus = loadMachineStatuses();
+    
+    return this.machineStatus
   }
 
   openCalibrationModal = () => {
