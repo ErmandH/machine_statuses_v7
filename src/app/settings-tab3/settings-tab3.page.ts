@@ -15,24 +15,22 @@ export class SettingsTab3Page implements OnInit {
   machineSettings: MachineSettings;
   constructor(private router: Router) {}
 
-
   ngOnInit(): void {
-    this.loadSettings()
+    this.loadSettings();
   }
 
   onToggleChange(event: any, machine: Machines, machineIndex: number) {
     const settingsData = localStorage.getItem('settings').split(',');
-    settingsData[8 + machineIndex] = event.checked ? '1' : '0';
+    settingsData[8 + machineIndex] = event.detail.checked ? '1' : '0';
     const settingsString = settingsData.join(',');
     localStorage.setItem('settings', settingsString);
-    machine.show = event.checked;
+    machine.show = event.detail.checked;
   }
 
-  loadSettings(){
+  loadSettings() {
     this.machineSettings = loadMachineSettings();
     this.machineStatus = loadMachineStatuses();
-    
-    return this.machineStatus
+    return this.machineStatus;
   }
 
   openCalibrationModal = () => {

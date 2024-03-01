@@ -4,12 +4,16 @@
       <ion-col size="8" class="full-height">
         <ion-content color="light">
           <div class="form-container">
-            <ion-item *ngFor="let machine of (loadSettings()).machines; let i = index">
-              <ion-toggle labelPlacement="start" (ionChange)="onToggleChange($event, machine, i)" [checked]="machine.show">
-                {{i + 1}}. {{'settings.row-enable-disable.row-control' | translate}}({{'enable' |
+            <div class="flex justify-between items-center bg-white p-3 rounded-lg"
+              *ngFor="let machine of (loadSettings()).machines; let i = index">
+                <span>
+                  {{i + 1}}. {{'settings.row-enable-disable.row-control' | translate}}({{'enable' |
                 translate}}/{{'disable' |translate}})
+                </span>
+                <ion-toggle  (ionChange)="onToggleChange($event, machine, i)"
+                [checked]="machine.show">              
               </ion-toggle>
-            </ion-item>
+            </div>
           </div>
         </ion-content>
 
