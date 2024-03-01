@@ -1,0 +1,43 @@
+<form [formGroup]="info" (ngSubmit)="onFormSubmit()">
+  <ion-row>
+    <ion-col sizeMd="6">
+      <div class="form-container">
+        <ion-input label="{{'settings.general-fertilizer.fertilizer-start-torque' | translate}}" fill="solid"
+          labelPlacement="floating" formControlName="fertilizerStartTorque" type="number"></ion-input>
+
+        <ion-input label="{{'settings.general-fertilizer.fertilizer-calibration-rpm' | translate}}" fill="solid" labelPlacement="floating" formControlName="fertilizerCalibrationRPM"
+            type="number"></ion-input>
+
+          <ion-input label="{{'settings.general-fertilizer.fertilizer-calibration-tour' | translate}}" fill="solid" labelPlacement="floating" formControlName="fertilizerCalibrationTour"
+            type="number"></ion-input>
+
+          <ion-input label="{{'settings.general-fertilizer.multiplier' | translate}}" fill="solid" labelPlacement="floating" formControlName="multiplier" type="number"></ion-input>
+
+
+          <ion-input label="{{'settings.general-fertilizer.engine-signal-on-a-tour' | translate}}" fill="solid" labelPlacement="floating" formControlName="engineSignalOnATour"
+            type="number"></ion-input>
+
+          <ion-input label="{{'settings.general-fertilizer.the-unit-of-seed-area-meause' | translate}}" fill="solid" labelPlacement="floating" formControlName="unitSeedOfArea" type="number"></ion-input>
+
+      </div>
+    </ion-col>
+    <ion-col sizeMd="6">
+      <div class="form-container">
+
+          <ion-input label="{{'settings.general-fertilizer.distance-rpm' | translate}} 1" fill="solid" labelPlacement="floating" formControlName="distanceRPM1" type="number"></ion-input>
+
+          <ion-input label="{{'settings.general-fertilizer.engine-step' | translate}} 1" fill="solid" labelPlacement="floating" formControlName="engineStep1" type="number"></ion-input>
+
+
+          <ion-input label="{{'settings.general-fertilizer.distance-rpm' | translate}} 2" fill="solid" labelPlacement="floating" formControlName="distanceRPM2" type="number"></ion-input>
+
+          <ion-input label="{{'settings.general-fertilizer.engine-step' | translate}} 2" fill="solid" labelPlacement="floating" formControlName="engineStep2" type="number"></ion-input>
+
+          <ion-input label="{{'settings.general-fertilizer.distance-rpm' | translate}} 3" fill="solid" labelPlacement="floating" formControlName="distanceRPM3" type="number"></ion-input>
+
+          <ion-input label="{{'settings.general-fertilizer.engine-step' | translate}} 3" fill="solid" labelPlacement="floating" formControlName="engineStep3" type="number"></ion-input>
+
+      </div>
+    </ion-col>
+  </ion-row>
+</form>

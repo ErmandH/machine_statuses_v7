@@ -1,0 +1,77 @@
+<form [formGroup]="info" (ngSubmit)="onFormSubmit()">
+  <div class="form-container">
+
+    <ion-select fill="solid" label="{{'settings.general.seed-control-period' | translate}}"
+      formControlName="seedControlPeriod" [selectedText]="this.info.get('seedControlPeriod').value.toString().replace('.', ',') + 's'">
+      <ion-select-option value="0.25">0,25s</ion-select-option>
+      <ion-select-option value="0.5">0,50s</ion-select-option>
+      <ion-select-option value="0.75">0,75s</ion-select-option>
+      <ion-select-option value="1">1,00s</ion-select-option>
+      <ion-select-option value="1.5">1,50s</ion-select-option>
+      <ion-select-option value="2">2,00s</ion-select-option>
+    </ion-select>
+
+
+    <div *ngIf="info.get('seedControlPeriod').errors && info.get('seedControlPeriod').touched; else helperText"
+      class="input-bottom sc-ion-input-md"
+      style="padding-left: 16px!important; padding-right:  16px!important; padding-top: 0!important;">
+      <div class="error-text sc-ion-input-md">*{{'validations.required' | translate}}
+      </div>
+    </div>
+
+    <ng-template #helperText>
+      <div class="input-bottom sc-ion-input-md"
+        style="padding-left: 16px!important; padding-right:  16px!important; padding-top: 0!important;">
+        <div class="helper-text sc-ion-input-md">*{{'tooltip.seed-control-period' | translate}}</div>
+      </div>
+    </ng-template>
+
+    <ion-input type="number" fill="solid" label="{{'settings.general.disc-hole-number' | translate}}"
+      labelPlacement="floating" helperText="*{{'tooltip.disc-hole-number' | translate}}"
+      errorText="*{{'validations.disc-hole-number' | translate}}" formControlName="discHoleNumber"></ion-input>
+
+
+    <ion-input #distanceBetweenSeedsInput fill="solid" labelPlacement="floating"
+      label="{{'settings.general.distance-between-seeds' | translate}} (cm)"
+      helperText="*{{'tooltip.distance-between-seeds' | translate}}"
+      errorText="*{{'validations.distance-between-seeds' | translate}}" formControlName="distanceBetweenSeeds"
+      type="number"></ion-input>
+
+    <ion-input fill="solid" labelPlacement="floating" label="{{'settings.general.number-of-unit' | translate}} "
+      helperText="*{{'tooltip.number-of-unit' | translate}}" errorText="*{{'validations.number-of-unit' | translate}}"
+      formControlName="numberOfUnit" type="tel"></ion-input>
+
+
+    <ion-input fill="solid" labelPlacement="floating"
+      label="{{'settings.general.distance-between-units' | translate}} (cm)" #distanceBetweenUnitInput
+      helperText="*{{'tooltip.distance-between-units' | translate}}"
+      errorText="*{{'validations.distance-between-units' | translate}}" formControlName="distanceBetweenUnit"
+      type="number"></ion-input>
+
+
+    <ion-input fill="solid" labelPlacement="floating"
+      label="{{'settings.general.target-fertilizer-weight' | translate}} (Kg)" #fertilizerWeightInput
+      helperText="*{{'tooltip.target-fertilizer-weight' | translate}}"
+      errorText="*{{'validations.target-fertilizer-weight' | translate}}" formControlName="fertilizerWeight"
+      type="number"></ion-input>
+    <!-- <ion-label position="floating" class="unit" slot="end">Kg</ion-label> -->
+
+
+
+    <ion-input fill="solid" labelPlacement="floating" label="{{'settings.general.tolerance' | translate}} (%)"
+      helperText="*{{'tooltip.tolerance' | translate}}" errorText="*{{'validations.tolerance' | translate}}"
+      formControlName="tolerance" type="number"></ion-input>
+
+
+    <ion-input fill="solid" labelPlacement="floating" label="{{'settings.general.wheel-diameter' | translate}} (cm)"
+      helperText="*{{'tooltip.wheel-diameter' | translate}}" errorText="*{{'validations.wheel-diameter' | translate}}"
+      formControlName="wheelDiameter" type="number"></ion-input>
+
+    <ion-input fill="solid" labelPlacement="floating" label="{{'settings.general.number-of-signals' | translate}}"
+      helperText="*{{'tooltip.number-of-signals' | translate}}"
+      errorText="*{{'validations.number-of-signals' | translate}}" formControlName="numberOfSignals"
+      type="tel"></ion-input>
+
+  </div>
+
+</form>

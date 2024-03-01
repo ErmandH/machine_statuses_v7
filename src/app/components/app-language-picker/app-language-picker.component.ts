@@ -14,7 +14,7 @@ import { TranslateService } from '@ngx-translate/core';
     color="light"
     (click)="changeLanguage()"
   >
-    <ion-icon slot="icon-only" class="fi fi-{{ language }}"></ion-icon>
+    <ion-icon slot="icon-only" class="fi fi-{{ language }} fis"></ion-icon>
   </ion-button>`,
 })
 export class LanguagePickerComponent {

@@ -8,14 +8,15 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 import { AppLanguagePickerModule } from '../components/app-language-picker/app-language-picker.module';
-import { TabsPageRoutingModule } from '../tabs/tabs-routing.module';
+
+import { HomeButtonsPopoverModule } from '../components/home-buttons-popover/home-buttons-popover.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule, TabsPageRoutingModule,
+    HomePageRoutingModule, HomeButtonsPopoverModule,
     AppLanguagePickerModule
   ],
   declarations: [HomePage]

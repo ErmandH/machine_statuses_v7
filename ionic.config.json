@@ -1,5 +1,5 @@
 {
-  "name": "machine_statuses",
+  "name": "machinestatuses",
   "integrations": {
     "capacitor": {}
   },

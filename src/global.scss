@@ -1800,8 +1800,8 @@ ion-icon {
 .general-settings-buttons{
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    padding: 15px;
+    gap: 0.5rem;
+    padding: 8px;
 }
 
 .no-padding .scroll-content{
@@ -1817,9 +1817,12 @@ ion-icon {
 }
 
 
-.popover-content{
-    width: auto!important;
-    border-radius: 1.8rem!important;
-    padding: 1rem;
-    background-color: var(--ion-color-primary)!important;
+ion-popover {
+    --background: var(--ion-color-primary);
+    --box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+    --width: auto; 
+}
+  
+ion-popover ion-content {
+    --background: var(--ion-color-primary);
 }

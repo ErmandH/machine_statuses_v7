@@ -50,7 +50,7 @@
             "warning-description": "Üreticinize danışmadan bu değerlerin değiştirilmesi motorun hatalı dönmesine neden olacaktır. Lütfen bu değerleri üreticiniz belirtmeden değiştirmeyiniz.",
             "restore-default-settings": "Varsayılan Ayarlara Döndür",
             "title": "DİKKAT!",
-            "message": "Restoring to default settings...<br/> 3-2-1"
+            "message": "Restoring to default settings..."
         },
         "row-enable-disable": {
             "row-control": "Ünite Kontrolü"
@@ -91,7 +91,7 @@
         "row-reset-button": "Değerleri Sıfırla",
         "row-reset": {
             "title": "DİKKAT!",
-            "description": "Ünite sıfırlanacak... <br/> 3-2-1"
+            "description": "Ünite sıfırlanacak..."
         },
         "ok": "Tamam"
     },
@@ -116,7 +116,7 @@
         "distance": "Mesafe",
         "reset": "Sıfırla",
         "title": "DİKKAT!",
-        "message": "Çalışma istatistikleri sıfırlanacak...<br/> 3-2-1",
+        "message": "Çalışma istatistikleri sıfırlanacak...",
         "ok": "Tamam"
     },
     "area-info": {
@@ -124,7 +124,7 @@
         "partial-area": "Parsiyel Ekilen Alan",
         "area-reset-button": "Alan Sıfırlama",
         "title": "DİKKAT!",
-        "message": "Ekim değerleri sıfırlanacak...<br/> 3-2-1",
+        "message": "Ekim değerleri sıfırlanacak...",
         "ok": "Tamam"
     },
     "success": "Tamam",

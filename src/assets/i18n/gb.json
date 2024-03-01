@@ -50,7 +50,7 @@
             "warning-description": "Changing these values without consulting your manufacturer will cause the motor to spin incorrectly. Please do not change these values without specifying by your manufacturer.",
             "restore-default-settings": "Restore Default Settings",
             "title": "ATTENTION!",
-            "message": "Restoring to default settings...<br/> 3-2-1"
+            "message": "Restoring to default settings..."
         },
         "row-enable-disable":{
             "row-control": "Row Control"
@@ -91,7 +91,7 @@
         "row-reset-button": "Row Reset",
         "row-reset":{
             "title": "ATTENTION!",
-            "description": "Unite will be reset... <br/> 3-2-1"
+            "description": "Unite will be reset..."
         },
         "ok": "ok"
     },
@@ -116,7 +116,7 @@
         "distance":"Distance",
         "reset": "Reset",
         "title": "ATTENTION!",
-        "message": "Working statistics will be reset...<br/> 3-2-1",
+        "message": "Working statistics will be reset...",
         "ok": "Ok"
     },
     "area-info":{
@@ -124,7 +124,7 @@
         "partial-area": "Partial Area",
         "area-reset-button": "Area Reset",
         "title": "ATTENTION!",
-        "message": "Calculated area will be reset...<br/> 3-2-1",
+        "message": "Calculated area will be reset...",
         "ok":"Ok"
     },
     "success": "SUCCESS",

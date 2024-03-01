@@ -1,0 +1,100 @@
+<ion-content color="primary" class="ion-padding" id="area-content">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <h4 style="color: #CB9F40;" class="text-lg font-semibold mb-1">{{'seed-calibration-page.wheel-tour-count' | translate}}:</h4>
+        <div class="item">
+          <span class="item-label">
+            {{'seed-calibration-page.row' | translate}} 1:
+          </span>
+          <span class="item-value">
+            0
+          </span>
+        </div>
+        <div class="item">
+          <span class="item-label">
+            {{'seed-calibration-page.row' | translate}} 2:
+          </span>
+          <span class="item-value">
+            0
+          </span>
+        </div>
+        <div class="item">
+          <span class="item-label">
+            {{'seed-calibration-page.row' | translate}} 3:
+          </span>
+          <span class="item-value">
+            0
+          </span>
+        </div>
+        <div class="item">
+          <span class="item-label">
+            {{'seed-calibration-page.row' | translate}} 4:
+          </span>
+          <span class="item-value">
+            0
+          </span>
+        </div>
+        <div class="item">
+          <span class="item-label">
+            {{'seed-calibration-page.row' | translate}} 5:
+          </span>
+          <span class="item-value">
+            0
+          </span>
+        </div>
+        <div class="item">
+          <span class="item-label">
+            {{'seed-calibration-page.row' | translate}} 6:
+          </span>
+          <span class="item-value">
+            0
+          </span>
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <h4 style="color: #CB9F40;" class="text-lg font-semibold mb-1">{{'seed-calibration-page.dust-ratio' | translate}}:</h4>
+        <div class="item">
+          <span class="item-label">
+            {{'seed-calibration-page.dust' | translate}}
+          </span>
+        </div>
+        <div class="item">
+          <span class="item-label">
+            %80
+          </span>
+        </div>
+        <div class="item">
+          <span class="item-label">
+            {{'seed-calibration-page.light' | translate}}
+          </span>
+        </div>
+        <div class="item">
+          <span class="item-label">
+            %00
+          </span>
+        </div>
+        <div class="item">
+          <span class="item-label">
+            {{'seed-calibration-page.error' | translate}}
+          </span>
+        </div>
+        <div class="item">
+          <span class="item-label">
+            %10
+          </span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="bg-app-primary area-footer">
+  <ion-button (click)="showAlert()"  shape="round" color="light">
+    <ion-icon name="cog" slot="start"></ion-icon>
+    {{'seed-calibration-page.row-reset-button' | translate}}
+  </ion-button>
+  <ion-button (click)="goBack()"  shape="round" color="light">
+    {{'seed-calibration-page.ok' | translate}}
+  </ion-button>
+</ion-footer>

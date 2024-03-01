@@ -1,0 +1,150 @@
+<ng-container *ngIf="tab_index === 0">
+  <ion-content class="ion-padding" [fullscreen]="true">
+    <div class="flex justify-center align-center flex-column main">
+      <ion-row>
+        <ion-col col-12>
+          <h1 class="text-center text-xl font-semibold">{{'fertilizer-calibration-page.tour' | translate}}
+            {{tourCount}}/50</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 class="text-center">
+          <ion-button ion-button (click)="startTour()" color="primary" shape="round">
+            &nbsp;{{'fertilizer-calibration-page.start-test' | translate}}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button ion-button (click)="close()" fill="solid" color="primary" slot="end" shape="round">
+          &nbsp;{{'fertilizer-calibration-page.cancel' | translate}}
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ng-container>
+
+<ng-container *ngIf="tab_index === 1">
+  <ion-content class="ion-padding" [fullscreen]="true">
+    <div class="flex flex-col justify-center items-center h-full">
+      <ion-row>
+        <ion-col col-12>
+          <ion-input label="{{'fertilizer-calibration-page.fertilizer-weight' | translate}}" label-placement="floating"
+            fill="solid" placeholder="Enter the weight" class="min-w-80"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 class="text-center">
+          <ion-button (click)="testSection()" color="primary" shape="round">
+            &nbsp;{{'fertilizer-calibration-page.test-section' | translate}}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button ion-button (click)="close()" fill="solid" color="primary" slot="end" shape="round">
+          &nbsp;{{'fertilizer-calibration-page.cancel' | translate}}
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ng-container>
+
+
+<ng-container *ngIf="tab_index === 2">
+  <ion-content class="ion-padding" [fullscreen]="true">
+    <div class="flex flex-col justify-center items-center h-full">
+      <ion-row>
+        <ion-col col-12>
+          <ion-input label="{{'fertilizer-calibration-page.target-showing-speed' | translate}}" label-placement="floating"
+              fill="solid" placeholder="Enter the speed" class="min-w-80"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-input label="{{'fertilizer-calibration-page.target-fertilizer-per-hectar' | translate}}" label-placement="floating"
+              fill="solid" placeholder="Enter the weight" class="min-w-80"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 class="text-center">
+          <ion-button (click)="startTest()" color="primary" shape="round">
+            &nbsp;{{'fertilizer-calibration-page.test-section' | translate}}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+   
+
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button ion-button (click)="close()" fill="solid" color="primary" slot="end" shape="round">
+          &nbsp;{{'fertilizer-calibration-page.cancel' | translate}}
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ng-container>
+
+<ng-container *ngIf="tab_index === 3">
+  <ion-content class="ion-padding">
+    <div class="flex justify-center align-center flex-column main">
+      <ion-row>
+        <ion-col col-12 class="flex justify-center">
+          <h4 class="text-lg font-semibold">
+            {{'fertilizer-calibration-page.result' | translate}}: 0,00001 {{'hectare' | translate}}
+          </h4>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 class="text-center">
+          <ion-button ion-button (click)="testOk()" color="primary" shape="round">
+            &nbsp;{{'fertilizer-calibration-page.next' | translate}}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button ion-button (click)="close()" fill="solid" color="primary" slot="end" shape="round">
+          &nbsp;{{'fertilizer-calibration-page.cancel' | translate}}
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ng-container>
+
+
+
+
+<ng-container>
+  <ion-content class="ion-padding" *ngIf="tab_index === 4">
+    <div class="flex justify-center align-center flex-column main">
+      <ion-row>
+        <ion-col size="12" class="flex justify-center">
+          <h4 class="text-lg font-semibold">
+            Test {{'fertilizer-calibration-page.ok' | translate}}
+          </h4>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="text-center">
+          <ion-button (click)="closeTest()" shape="round">
+            &nbsp;{{'fertilizer-calibration-page.ok' | translate}}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-content>
+</ng-container>

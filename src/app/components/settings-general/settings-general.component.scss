@@ -1,0 +1,20 @@
+ion-item{
+	border-radius: 0.8rem;
+}
+.form-container{
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	height: 100%;
+}
+.valid-item .item-inner {
+	border-bottom: 2px solid rgb(50, 219, 100) !important;
+	border-color: rgb(50, 219, 100)!important; /* Sınıfı ng-valid olduğunda yeşil bir sınır ekler */
+}
+// .formInput{
+// 	padding-right: 10px;
+// }
+
+// .fertilizerInput{
+// 	padding-right: 7px;
+// }

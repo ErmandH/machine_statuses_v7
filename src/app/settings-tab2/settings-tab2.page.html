@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1" class="flex items-center justify-center">
+          <ion-icon name="arrow-back" class="text-2xl" routerLink="/"></ion-icon>
+        </ion-col>
+        <ion-col size="11">
+          <div>
+            <ion-segment mode="ios" value="t2">
+              <ion-segment-button routerLink="/settings-tab1" value="t1" color="light" shape="round">
+                {{'setting-tabs.general' | translate}}
+              </ion-segment-button>
+              <ion-segment-button routerLink="/settings-tab2" routerLinkActive="segment-button-checked" value="t2" color="light" shape="round">
+                {{'setting-tabs.general-fertilizer' | translate}}
+              </ion-segment-button>
+              <ion-segment-button routerLink="/settings-tab3" value="t3" color="light" shape="round">
+                {{'setting-tabs.row-enable-disable' | translate}}
+              </ion-segment-button>
+              <ion-segment-button routerLink="/settings-tab4" value="t4" color="light" shape="round">
+                {{'setting-tabs.granular-motor' | translate}}
+              </ion-segment-button>
+            </ion-segment>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding id="settings">
+  <ion-grid style="height: 100%!important;"> 
+    <app-settings-general-fertilizer
+>
+</app-settings-general-fertilizer>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="bg-app-primary">
+  <div class="flex justify-center align-center py-1">
+    <ion-button (click)="showAlert()"  shape="round" color="light">
+        <ion-icon name="cog" slot="start"></ion-icon>
+        {{'settings.general-fertilizer.restore-default-settings' | translate}}
+      </ion-button>
+    <ion-button (click)="submitFertilizerSettings()" [disabled]="isFertilizerSaveButtonDisabled" shape="round" color="light" type="submit">
+            {{'settings.general.save' | translate}}
+    </ion-button>
+</div>
+</ion-footer> 

@@ -1,47 +1,74 @@
 <ion-header class="bg-app-primary">
   <div class="header-container">
-    <ion-button color="light" shape="round" class="flex justify-center align-center">
+    <ion-button routerLink="/area-info" color="light" shape="round" class="flex justify-center align-center">
       <ion-icon slot="start" name="star"></ion-icon>
-      <span>&nbsp;15.76</span>
+      <span>&nbsp;{{machineStatus.seedArea}} {{machineStatus.seedUnit}}</span>
     </ion-button>
-    <ion-button color="light" shape="round">
+    <ion-button routerLink="/working-statistics" color="light" shape="round">
       <ion-icon slot="start" class="fn-tractor"></ion-icon>
-      <span>&nbsp; 100 km/h</span>
+      <span>&nbsp; {{machineStatus.speed}} km/h</span>
 
     </ion-button>
     <ion-button color="light" shape="round">
       <ion-icon slot="start" class="fn-leaf" style="color:#0bac0b;stroke:#000"></ion-icon>
-      <span>&nbsp; 50 cm</span>
+      <span>&nbsp; {{ machineSettings.distanceBetweenSeeds }} cm</span>
 
     </ion-button>
     <ion-button color="light" shape="round">
       <ion-icon slot="start" class="fn-leaf" style="color:#0bac0b;stroke:#000"></ion-icon>
-      <span>&nbsp;500 m2</span>
+      <span>&nbsp;{{machineStatus.seedPerAreaAvg}} m2</span>
 
     </ion-button>
-    <ion-button color="light" shape="round" routerLink="/tabs/tab1">
+    <ion-button color="light" shape="round" routerLink="/settings-tab1">
       <ion-icon slot="icon-only" name="cog"></ion-icon>
     </ion-button>
-    <ion-button color="light" shape="round">
+    <ion-button color="light" shape="round" routerLink="/login">
       <ion-icon slot="icon-only" name="log-out"> </ion-icon>
     </ion-button>
   </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <p>naber</p>
+<ion-content [fullscreen]="true" color="primary" scrollX="true" class="ion-padding">
+  <div id="scroller-container" class="h-full flex items-center">
+    <div id="scroll-card" class="flex">
+      <div class="flex" *ngFor="let item of machineStatus.machines; let i = index">
+        <ion-card (click)="goToRowEnableDisable()" class="machine-cards">
+          <ion-card-header class="machine-header">
+            <ion-card-subtitle float-right>{{item.no}}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon *ngIf="item.show" [style.background-color]="item.statusColor" class="fn-grain-drill"
+              [style.color]="item.statusColor"></ion-icon>
+            <ion-icon *ngIf="!item.show" class="fn-error-grain-drill" [style.color]="'#eb3232'"></ion-icon>
+          </ion-card-content>
+          <ion-card-content (click)="goToDistanceBetweenSeeds();$event.stopPropagation()"
+            class="machine-distance"><span>{{machineSettings.distanceBetweenSeeds}}
+              {{item.unit}}</span></ion-card-content>
+        </ion-card>
+        <div (click)="goToDistanceBetweenUnits()" class="distance" *ngIf="i !== machineStatus.machines.length - 1">
+          <p>{{machineSettings.distanceBetweenUnits}} cm</p>
+          <ion-icon name="code-working"></ion-icon>
+        </div>
+        <!-- <div (click)="goToDistanceBetweenUnits()" style="visibility: hidden;" class="distance"
+          *ngIf="i === machineStatus.machines.length - 1">
+          <p>{{machineSettings.distanceBetweenUnits}} cm</p>
+          <ion-icon name="code-working"></ion-icon>
+        </div> -->
+      </div>
+    </div>
+  </div>
 </ion-content>
 
 
-<ion-footer class="bg-app-primary" style="display: flex;justify-content: center;">
+<ion-footer class="bg-app-primary flex justify-center">
   <div class="header-container">
     <ion-button color="light" shape="round">
       <ion-icon slot="start" class="fn-tractor"></ion-icon>
-      &nbsp;100 mbar
+      &nbsp;{{machineStatus.vacuum}} mbar
     </ion-button>
-    <ion-button color="light" shape="round">
+    <ion-button color="light" shape="round" (click)="goToFertilizerWeight()">
       <ion-icon slot="start" class="fn-ruler"></ion-icon>
-      &nbsp;50/Kg
+      &nbsp;{{machineStatus.fertilizerPerUnit}} {{machineStatus.seedUnit}}/Kg
     </ion-button>
     <div class="app-logo-container">
       <img class="app-logo" src="../../assets/imgs/logo.png">
@@ -59,9 +86,9 @@
       <ion-icon [name]="sound" slot="icon-only"></ion-icon>
     </ion-button>
     <ion-button class="lg-toggle-button" shape="round" color="light">
-      <ion-icon slot="icon-only" name="help-circle"></ion-icon>
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
     </ion-button>
-    <ion-button class="popover-button" shape="round" color="light">
+    <ion-button class="popover-button" shape="round" color="light" (click)="presentPopover($event)">
       <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
     </ion-button>
   </div>
