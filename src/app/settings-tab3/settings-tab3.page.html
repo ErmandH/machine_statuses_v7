@@ -1,13 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>settings-tab3</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">settings-tab3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-grid style="height: 100%!important;"> 
+              <ion-row class="full-height">
+                  <ion-col size="8" class="full-height">
+                      <ion-content>
+                        <div class="form-container">
+                          <ion-item *ngFor="let machine of machineStatus.machines; let i = index">
+                              <ion-label>{{i + 1}}. {{'settings.row-enable-disable.row-control' | translate}}({{'enable' | translate}}/{{'disable' |translate}})</ion-label>
+                               <ion-toggle (ionChange)="onToggleChange($event, machine, i)" [checked]="machine.show"></ion-toggle>
+                           </ion-item>
+                     </div>
+                      </ion-content>
+                      
+                  </ion-col>
+                  <ion-col sizeMd="4">
+                    <div class="general-settings-buttons">
+                      <ion-button shape="round" size="small" (click)="openSeedCalibrationModal()">
+                        <ion-icon name="leaf" slot="start"></ion-icon>
+                        {{'settings.general.seed-calibration' | translate}}
+                      </ion-button>
+                      <ion-button shape="round" size="small" (click)="openCalibrationModal()">
+                        <ion-icon name="logo-dropbox" slot="start"></ion-icon>
+                        {{'settings.general.fertilizer-calibration' | translate}}
+                      </ion-button>
+                    </div>
+                  </ion-col>
+              </ion-row>
+  </ion-grid>
 </ion-content>
+

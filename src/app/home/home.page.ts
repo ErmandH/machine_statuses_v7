@@ -66,20 +66,20 @@ export class HomePage implements OnInit {
     await popover.present();
   }
 
-  goToRowEnableDisable = () => this.router.navigate(['/settings-tab3']);
+  goToRowEnableDisable = () => this.router.navigate(['/tabs/settings-tab3']);
 
   goToDistanceBetweenSeeds = () =>
-    this.router.navigate(['/settings-tab1'], {
+    this.router.navigate(['/tabs/settings-tab1'], {
       state: { focusInput: 'distanceBetweenSeedsInput' },
     });
 
   goToDistanceBetweenUnits = () =>
-    this.router.navigate(['/settings-tab1'], {
+    this.router.navigate(['/tabs/settings-tab1'], {
       state: { focusInput: 'distanceBetweenUnitsInput' },
     });
 
   goToFertilizerWeight = () =>
-    this.router.navigate(['/settings-tab1'], {
+    this.router.navigate(['/tabs/settings-tab1'], {
       state: { focusInput: 'fertilizerWeightInput' },
     });
 }

@@ -10,15 +10,18 @@ import { HomePage } from './home.page';
 import { AppLanguagePickerModule } from '../components/app-language-picker/app-language-picker.module';
 
 import { HomeButtonsPopoverModule } from '../components/home-buttons-popover/home-buttons-popover.module';
+import { TabsPageRoutingModule } from '../tabs/tabs-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule, HomeButtonsPopoverModule,
-    AppLanguagePickerModule
+    HomePageRoutingModule,
+    HomeButtonsPopoverModule,
+    TabsPageRoutingModule,
+    AppLanguagePickerModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
 })
 export class HomePageModule {}
