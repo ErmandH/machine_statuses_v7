@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {
-  AlertController,
-  PopoverController,
-} from '@ionic/angular';
+import { AlertController, PopoverController } from '@ionic/angular';
 import { MachineSettings } from 'src/models/MachineSettings';
 import { MachineStatus } from 'src/models/MachineStatus';
 import isMotorsDisabled from 'src/utils/isMotorsDisabled';
 import { loadMachineStatuses } from 'src/utils/loadMachineStatus';
 import { HomeButtonsPopoverComponent } from '../components/home-buttons-popover/home-buttons-popover.component';
 import loadMachineSettings from 'src/utils/loadMachineSettings';
+import { ScreenOrientation } from '@capacitor/screen-orientation';
 
 @Component({
   selector: 'app-home',
@@ -29,7 +27,14 @@ export class HomePage implements OnInit {
     private popoverCtrl: PopoverController
   ) {}
 
-  ngOnInit() {
+  async ionViewDidEnter() {
+    try {
+      await ScreenOrientation.lock({  orientation: 'landscape'})
+    } catch (error) {
+      
+    }
+  }
+  ionViewWillEnter() {
     if (isMotorsDisabled()) {
       this.alertCtrl
         .create({
@@ -39,6 +44,11 @@ export class HomePage implements OnInit {
         })
         .then(async (alert) => await alert.present());
     }
+    this.machineStatus = loadMachineStatuses();
+    this.machineSettings = loadMachineSettings();
+  }
+
+  ngOnInit() {
     this.machineStatus = loadMachineStatuses();
     this.machineSettings = loadMachineSettings();
   }
