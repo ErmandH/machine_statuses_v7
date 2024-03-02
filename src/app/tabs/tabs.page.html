@@ -1,4 +1,4 @@
-<ion-tabs>
+<ion-tabs (ionTabsDidChange)="onTabChange()">
   <ion-tab-bar slot="top" color="primary">
     <ion-tab-button routerLink="/" class="flex-grow-0 flex-shrink-0 tab-selected">
       <ion-icon name="arrow-back"></ion-icon>
@@ -9,7 +9,7 @@
       <ion-label>{{'setting-tabs.general' | translate}}</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="settings-tab2" href="/settings-tab2">
+    <ion-tab-button (click)="openPasswordModal()" [disabled]="disableTab2">
       <ion-icon aria-hidden="true" name="construct"></ion-icon>
       <ion-label>{{'setting-tabs.general-fertilizer' | translate}}</ion-label>
     </ion-tab-button>

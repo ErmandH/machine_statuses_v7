@@ -1,0 +1,90 @@
+#login {
+
+  h1 {
+    font-size: 23px;
+    font-weight: 400;
+    color: white;
+  }
+  .logo {
+    width: 200px;
+    height: 75px;
+	text-align: center;
+  }
+  ion-input,
+  ion-label,
+  .login-input .item {
+    background-color: var(--ion-color-primary) !important;
+    color: #fff !important;
+  }
+  .login-input {
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    //border: 1px solid #000;
+    //margin: 15px;
+    //border-radius: 5px;
+  }
+  .login-button {
+    min-width: 200px;
+  }
+
+  .sign-up-button {
+    --background: #050b43;
+  }
+
+  // new
+  .input-container {
+    position: relative;
+    justify-self: center;
+  }
+
+  input {
+    height: 48px;
+    //min-width: 500px;
+    width: 100%;
+    border: 1px solid #c0c0c0;
+    color: white;
+    background-color: var(--ion-color-primary) !important;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
+  .label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  input,
+  .label .text {
+    font-family: "Segoe UI";
+    font-size: 16px;
+  }
+
+  .label .text {
+    transition: all 0.15s ease-out;
+    color: white;
+  }
+
+  input:focus {
+    outline: none;
+    border: 2px solid white;
+  }
+
+  input:focus + .label .text,
+  :not(input[value=""]) + .label .text {
+    font-size: 12px;
+    transform: translate(0, -150%);
+    background-color: var(--ion-color-primary) !important;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  input:focus + .label .text {
+    color: white;
+  }
+}

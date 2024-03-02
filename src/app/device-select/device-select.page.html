@@ -1,19 +1,26 @@
 <ion-header>
   <ion-toolbar padding color="primary">
-    <div *ngIf="isDeviceExist()" class="flex items-center">
-      <ion-button routerLink="/" color="light" shape="round" style="margin-left: 0.8rem;">
-        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-      </ion-button>
-      <ion-title>{{'select-device' | translate}}</ion-title>
-      <ion-button *ngIf="scanText === ''" (click)="startScanning()" color="light" shape="round">SCAN</ion-button>
-      <b *ngIf="scanText !== ''">Scanning...</b>
-      <ion-buttons slot="end" style="padding-right: 0.8rem;">
-        <ion-label>
-          <ion-icon name="bluetooth"></ion-icon>
-          <ion-toggle color="light" (ionChange)="toggleBle($event)" [(ngModel)]="ble"></ion-toggle>
-        </ion-label>
-      </ion-buttons>
+    <div *ngIf="isDeviceExist()" class="flex items-center justify-between">
+      <div id="left-wrapper" class="flex gap-1 items-center">
+        <ion-button routerLink="/" color="light" fill="clear" shape="round">
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+        <h1 class="text-white text-xl">{{'select-device' | translate}}</h1>
+      </div>
+      <div id="bluetooth-wrapper" class="flex items-center gap-1 pr-1">
+        <ion-button *ngIf="scanText === ''" (click)="startScanning()" color="light" shape="round">SCAN</ion-button>
+        <b *ngIf="scanText !== ''">Scanning...</b>
+        <ion-buttons slot="end">
+          <ion-label>
+            <ion-icon name="bluetooth"></ion-icon>
+            <ion-toggle color="light" (ionChange)="toggleBle($event)" [(ngModel)]="ble"></ion-toggle>
+          </ion-label>
+        </ion-buttons>
+      </div>
+
     </div>
+
+
     <div *ngIf="!isDeviceExist()" class="flex" style="gap: 0.5rem;">
       <ion-title>{{'select-device' | translate}}</ion-title>
       <div style="display: flex; gap: 0.5rem;">
@@ -39,9 +46,10 @@
     <ion-card-content class="flex items-center justify-between">
       <ion-card-title>{{device.localName}}</ion-card-title>
       <ion-button (click)="connect(device, i)" *ngIf="!device.connection" shape="round" slot="end">Connect</ion-button>
-      <ion-button (click)="disconnect(device, i)" *ngIf="device.connection" shape="round" slot="end">Disconnect</ion-button>
+      <ion-button (click)="disconnect(device, i)" *ngIf="device.connection" shape="round"
+        slot="end">Disconnect</ion-button>
     </ion-card-content>
-      
+
   </ion-card>
 
   <!-- <ion-list *ngIf="devices.length > 0">

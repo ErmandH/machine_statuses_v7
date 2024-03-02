@@ -8,6 +8,7 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
 import { TranslateModule } from '@ngx-translate/core';
+import { FertilizerPasswordModalModule } from '../components/fertilizer-password-modal/fertilizer-password-modal.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { TranslateModule } from '@ngx-translate/core';
     FormsModule,
     IonicModule,
     TabsPageRoutingModule,
-    TranslateModule
+    TranslateModule,
+    FertilizerPasswordModalModule
   ],
   declarations: [TabsPage]
 })

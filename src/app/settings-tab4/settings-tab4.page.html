@@ -1,7 +1,34 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">settings-tab4</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" color="light">
+  <ion-grid style="height: 100%!important;">
+    <ion-row class="full-height">
+      <ion-col size="8" class="full-height">
+        <ion-content color="light">
+          <div class="form-container">
+            <div class="flex justify-between items-center bg-white p-3 rounded-lg"
+              *ngFor="let motor of (loadSettings()).motors; let i = index">
+                <span>
+                  {{'settings.granular-motor.motor' | translate}} {{i + 1}}({{'enable' | translate}}/{{'disable' | translate}})
+                </span>
+                <ion-toggle  (ionChange)="onToggleChange($event, motor, i)"
+                [checked]="motor.enabled">              
+              </ion-toggle>
+            </div>
+          </div>
+        </ion-content>
+
+      </ion-col>
+      <ion-col sizeMd="4">
+        <div class="general-settings-buttons">
+          <ion-button shape="round" size="small" (click)="openSeedCalibrationModal()">
+            <ion-icon name="leaf" slot="start"></ion-icon>
+            {{'settings.general.seed-calibration' | translate}}
+          </ion-button>
+          <ion-button shape="round" size="small" (click)="openCalibrationModal()">
+            <ion-icon name="logo-dropbox" slot="start"></ion-icon>
+            {{'settings.general.fertilizer-calibration' | translate}}
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
