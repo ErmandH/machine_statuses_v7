@@ -78,10 +78,13 @@
       <div class="flex items-center justify-center">
         <img src="assets/imgs/logo.png" class="logo" />
       </div>
-      <h1 class="text-center">Electronic Monitoring & Control Devices</h1>
+      <h1 class="text-center text-lg font-semibold">Electronic Monitoring & Control Devices</h1>
 
 
-      <div class="input-container">
+      <ion-input type="email" label="{{'login.e-mail' | translate}}" label-placement="floating" color="light" fill="outline" placeholder="example@example.com"></ion-input>
+      <ion-input type="password" label="{{'login.password' | translate}}" label-placement="floating" color="light" fill="outline" placeholder="*******"></ion-input>
+
+      <!-- <div class="input-container">
         <input type="email" id="mail" name="mail" value="" aria-labelledby="label-mail" />
         <label class="label" for="mail" id="label-mail">
           <div class="text">
@@ -95,7 +98,7 @@
         <label class="label" for="pass" id="label-pass">
           <div class="text">{{'login.password' | translate}}</div>
         </label>
-      </div>
+      </div> -->
 
       <ion-button class="forgot-button" fill="clear" color="light">
         {{'login.forgot-password' | translate}}

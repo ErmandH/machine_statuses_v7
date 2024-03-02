@@ -8,14 +8,10 @@ import { TranslateService } from '@ngx-translate/core';
   // <ion-option value="tr">Türkçe</ion-option>
   // <ion-option value="en">English</ion-option>
   // </ion-select>`
-  template: `<ion-button
-    shape="round"
-    ion-button
-    color="light"
-    (click)="changeLanguage()"
-  >
-    <ion-icon slot="icon-only" class="fi fi-{{ language }} fis"></ion-icon>
+  template: `<ion-button class="lang-button" shape="round" color="light" (click)="changeLanguage()">
+    <ion-icon size="small" slot="icon-only" class="fi fi-{{ language }} fis"></ion-icon>
   </ion-button>`,
+  styleUrls: ['./app-language-picker.scss']
 })
 export class LanguagePickerComponent {
   language: string | null;

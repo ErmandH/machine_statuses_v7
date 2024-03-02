@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, PopoverController } from '@ionic/angular';
 import { MachineSettings } from 'src/models/MachineSettings';
@@ -21,6 +21,7 @@ export class HomePage implements OnInit {
   sound: string = 'volume-high-outline';
   machineSettings: MachineSettings = null;
   machineStatus: MachineStatus = null;
+
   constructor(
     private router: Router,
     private alertCtrl: AlertController,

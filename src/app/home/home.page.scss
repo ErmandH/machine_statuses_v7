@@ -6,6 +6,9 @@
   padding: 0.5rem;
 }
 
+.lang-button {
+}
+
 .machine-cards {
   background-color: transparent !important;
   border-radius: 12px;
@@ -43,7 +46,7 @@
   padding: 8px;
 }
 .app-logo-container {
-  padding: 0 1.2rem 0 1.2rem;
+  padding: 0;
   display: flex;
   align-items: center;
 }
@@ -52,7 +55,7 @@
   width: 100%;
 }
 
-@media (max-width: 1022px) {
+@media (max-width: 797px) {
   .lg-toggle-button {
     display: none;
   }
@@ -61,7 +64,7 @@
   }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 798px) {
   .popover-button {
     display: none;
   }
@@ -70,25 +73,25 @@
   }
 }
 
-@media (max-width: 936px) {
+@media (max-width: 742px) {
   .md-toggle-button {
     display: none;
   }
 }
 
-@media (min-width: 937px) {
+@media (min-width: 743px) {
   .md-toggle-button {
     display: block;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 684px) {
   .sm-toggle-button {
     display: none;
   }
 }
 
-@media (min-width: 851px) {
+@media (min-width: 685px) {
   .sm-toggle-button {
     display: block;
   }
