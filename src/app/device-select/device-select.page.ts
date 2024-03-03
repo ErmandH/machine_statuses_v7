@@ -4,12 +4,10 @@ import {
   BleClient,
   BluetoothLe,
   dataViewToText,
-  hexStringToDataView,
-  numberToUUID,
-  numbersToDataView,
   textToDataView,
 } from '@capacitor-community/bluetooth-le';
-import { AlertController } from '@ionic/angular';
+import { AlertController, AlertOptions } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 type Device = {
   id: string;
@@ -21,10 +19,6 @@ type Device = {
 
 const SERVICE_UUID = '49535343-fe7d-4ae5-8fa9-9fafd205e455';
 const CHARACTERISTIC_UUID = '49535343-1e4d-4bd9-ba61-23c647249616';
-const dataToSend = 'AT+VER\r\n'; // RN4870 için bir AT komutu
-
-const BATTERY_SERVICE = numberToUUID(0x180f);
-const BATTERY_CHARACTERISTIC = numberToUUID(0x2a19);
 
 @Component({
   selector: 'app-device-select',
@@ -39,7 +33,8 @@ export class DeviceSelectPage implements OnInit {
   constructor(
     private router: Router,
     private change: ChangeDetectorRef,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private translate: TranslateService
   ) {
     console.log('scan page open');
     // this.devices = [
@@ -78,18 +73,7 @@ export class DeviceSelectPage implements OnInit {
     console.log('device selected', device.name);
     this.router.navigate(['/']);
   }
-  scanForDevices() {
-    this.devices = []; // Clear the existing devices list
 
-    // this.ble.scan([], 5).subscribe(
-    //   device => {
-    //     this.devices.push(device);
-    //   },
-    //   error => {
-    //     console.error('Error scanning for BLE devices', error);
-    //   }
-    // );
-  }
   isDeviceExist() {
     if (localStorage.getItem('bleDeviceId')) return true;
     return false;
@@ -130,84 +114,85 @@ export class DeviceSelectPage implements OnInit {
     });
   }
 
-  connect(device, index) {
+  async connect(device, index) {
     const deviceId = device.device.deviceId;
-    BleClient.connect(deviceId).then(
-      async () => {
-        this.devices[index]['connection'] = true;
-        this.change.detectChanges();
-        //alert(`Connected to ${JSON.stringify(device)}!`);
 
-        // try {
-        //   await BleClient.write(
-        //     device.deviceId,
-        //     SERVICE_UUID,
-        //     CHARACTERISTIC_UUID,
-        //     hexStringToDataView('746573746d6573616a69')
-        //   );
-        // } catch (error) {
-        //   alert('discover service failed: ' + error)
-        // }
-
-        try {
-          await BleClient.discoverServices(deviceId);
-          const services = await BleClient.getServices(deviceId);
-          const filteredServices = services.filter((service) => {
-            // Servisin characteristics dizisinde write özelliği true olanı kontrol et
-            return service.characteristics.some(
-              (characteristic) =>
-                characteristic.properties.write === true ||
-                characteristic.properties.writeWithoutResponse === true
-            );
-          });
-          const filteredCharacteristics =
-            filteredServices[0].characteristics.filter((characteristic) => {
-              return (
-                characteristic.properties.write === true ||
-                characteristic.properties.writeWithoutResponse
-              );
-            });
-          const str = filteredCharacteristics.map(
-            (characteristic) => `${JSON.stringify(characteristic)}\n\n\n`
-          );
-          //alert(`${str}`)
-
-          await BleClient.startNotifications(
-            deviceId,
-            SERVICE_UUID,
-            CHARACTERISTIC_UUID,
-            (value) => {
-              alert(`value = ${dataViewToText(value)}`);
-            }
-          );
-
-          setInterval(async () => {
-            await BleClient.write(
-              deviceId,
-              SERVICE_UUID,
-              CHARACTERISTIC_UUID,
-              textToDataView('test mesaji')
-            );
-          }, 4000);
-
-          // alert(
-          //   `yollanan characteristik = ${filteredCharacteristics[1].uuid}\n karakteristikler = ${str}`
-          // );
-        } catch (error) {
-          alert('discover service failed: ' + error);
-        }
-      },
-      (error) => {
-        alert(error);
-      }
-    );
+    try {
+      // connect to device
+      await BleClient.connect(deviceId, (deviceId) => {
+        // cihaz disconnect oldugunda ne yapsin
+      });
+      await this.showAlert({
+        header: this.translate.instant('success'),
+        message: `${this.translate.instant('connected')} ${device.localName}`,
+        buttons: [
+          {
+            text: this.translate.instant('ok'),
+            handler: () => {
+              // cihaza baglanildiginda ne yapsin
+            },
+          },
+        ],
+      });
+      this.devices[index]['connection'] = true;
+      this.change.detectChanges();
+      await this.startNotifications(deviceId, (value) => {});
+      setInterval(async () => {
+        await this.write(deviceId, textToDataView('test mesaji'));
+      }, 4000);
+    } catch (error) {
+      await this.showAlert({
+        header: this.translate.instant('error'),
+        message: error,
+        buttons: [
+          {
+            text: this.translate.instant('ok'),
+            handler: () => {},
+          },
+        ],
+      });
+    }
   }
 
   disconnect(device, index) {
-    BleClient.disconnect(device.device.deviceId).then(() => {
+    BleClient.disconnect(device.device.deviceId).then(async () => {
+      await this.showAlert({
+        header: this.translate.instant('disconnected'),
+        message: `${this.translate.instant('disconnect-message')} ${
+          device.localName
+        }`,
+        buttons: [
+          {
+            text: this.translate.instant('ok'),
+            handler: () => {
+              // disconnect edildikten sonra
+            },
+          },
+        ],
+      });
       this.devices[index]['connection'] = false;
       this.change.detectChanges();
-      alert('Disconnected!');
     });
+  }
+
+  async startNotifications(
+    deviceId: string,
+    callback: (value: DataView) => void
+  ) {
+    await BleClient.startNotifications(
+      deviceId,
+      SERVICE_UUID,
+      CHARACTERISTIC_UUID,
+      callback
+    );
+  }
+
+  async write(deviceId: string, value: DataView) {
+    await BleClient.write(deviceId, SERVICE_UUID, CHARACTERISTIC_UUID, value);
+  }
+
+  async showAlert(opts: AlertOptions) {
+    const alert = await this.alertController.create(opts);
+    await alert.present();
   }
 }
