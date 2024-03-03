@@ -3,7 +3,11 @@ import { Router } from '@angular/router';
 import {
   BleClient,
   BluetoothLe,
+  dataViewToText,
   hexStringToDataView,
+  numberToUUID,
+  numbersToDataView,
+  textToDataView,
 } from '@capacitor-community/bluetooth-le';
 import { AlertController } from '@ionic/angular';
 
@@ -18,6 +22,9 @@ type Device = {
 const SERVICE_UUID = '49535343-fe7d-4ae5-8fa9-9fafd205e455';
 const CHARACTERISTIC_UUID = '49535343-1e4d-4bd9-ba61-23c647249616';
 const dataToSend = 'AT+VER\r\n'; // RN4870 için bir AT komutu
+
+const BATTERY_SERVICE = numberToUUID(0x180f);
+const BATTERY_CHARACTERISTIC = numberToUUID(0x2a19);
 
 @Component({
   selector: 'app-device-select',
@@ -153,14 +160,39 @@ export class DeviceSelectPage implements OnInit {
                 characteristic.properties.writeWithoutResponse === true
             );
           });
-          const filteredCharacteristics = filteredServices[0].characteristics.filter(characteristic => {
-            return characteristic.properties.write === true ||characteristic.properties.writeWithoutResponse
-          })
-          const str = filteredCharacteristics.map(characteristic => `${JSON.stringify(characteristic)}\n\n\n`)
+          const filteredCharacteristics =
+            filteredServices[0].characteristics.filter((characteristic) => {
+              return (
+                characteristic.properties.write === true ||
+                characteristic.properties.writeWithoutResponse
+              );
+            });
+          const str = filteredCharacteristics.map(
+            (characteristic) => `${JSON.stringify(characteristic)}\n\n\n`
+          );
           //alert(`${str}`)
 
-          const response = await BleClient.read(deviceId, services[0].uuid, services[0].characteristics[0].uuid);
-          alert('response = ' + JSON.stringify(response) )
+          await BleClient.startNotifications(
+            deviceId,
+            SERVICE_UUID,
+            CHARACTERISTIC_UUID,
+            (value) => {
+              alert(`value = ${dataViewToText(value)}`);
+            }
+          );
+
+          setInterval(async () => {
+            await BleClient.write(
+              deviceId,
+              SERVICE_UUID,
+              CHARACTERISTIC_UUID,
+              textToDataView('test mesaji')
+            );
+          }, 4000);
+
+          // alert(
+          //   `yollanan characteristik = ${filteredCharacteristics[1].uuid}\n karakteristikler = ${str}`
+          // );
         } catch (error) {
           alert('discover service failed: ' + error);
         }
