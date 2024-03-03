@@ -9,6 +9,10 @@
     "hectare": "Hektar",
     "cancel": "Vazgeç",
     "password": "Şifre",
+    "error":"Hata",
+    "connected":"Şu cihaza bağlanıldı",
+    "disconnected": "Bağlantı Kesildi",
+    "disconnect-message": "Şu cihazın bağlantısı kesildi",
     "device-not-found":"Herhangi bir cihaz bulunamadi",
     "login": {
         "sign-in": "GİRİŞ YAP",

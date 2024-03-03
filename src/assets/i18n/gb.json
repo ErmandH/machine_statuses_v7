@@ -9,6 +9,10 @@
     "hectare": "Hectare",
     "cancel": "Cancel",
     "password":"Password",
+    "error": "Error",
+    "connected":"Connected to",
+    "disconnected": "Disconnected",
+    "disconnect-message": "Disconnected from",
     "device-not-found":"No devices found",
     "login":{
         "sign-in":"SIGN IN",
