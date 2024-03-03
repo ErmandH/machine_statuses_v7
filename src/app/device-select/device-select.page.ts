@@ -1,6 +1,10 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BleClient, BluetoothLe } from '@capacitor-community/bluetooth-le';
+import {
+  BleClient,
+  BluetoothLe,
+  hexStringToDataView,
+} from '@capacitor-community/bluetooth-le';
 import { AlertController } from '@ionic/angular';
 
 type Device = {
@@ -10,6 +14,10 @@ type Device = {
   data: string;
   settings: string;
 };
+
+const SERVICE_UUID = '49535343-fe7d-4ae5-8fa9-9fafd205e455';
+const CHARACTERISTIC_UUID = '49535343-1e4d-4bd9-ba61-23c647249616';
+const dataToSend = 'AT+VER\r\n'; // RN4870 için bir AT komutu
 
 @Component({
   selector: 'app-device-select',
@@ -97,9 +105,8 @@ export class DeviceSelectPage implements OnInit {
   }
 
   async startScanning() {
-    this.devices = []
+    this.devices = [];
     this.scanText = 'Scanning...';
-    
 
     BleClient.requestLEScan({ allowDuplicates: false }, (result) => {
       if (result.localName) {
@@ -110,16 +117,6 @@ export class DeviceSelectPage implements OnInit {
     setTimeout(() => this.stopScanning(), 7000);
   }
 
-  async presentAlert(){
-    const alert = await this.alertController.create({
-      header: 'Scanning',
-      message: `BLE: ${this.ble ? 'enabled' : 'disabled'}`,
-      buttons: ['Action'],
-    });
-
-    await alert.present();
-  }
-
   stopScanning(): void {
     BluetoothLe.stopLEScan().then(() => {
       this.scanText = '';
@@ -127,11 +124,46 @@ export class DeviceSelectPage implements OnInit {
   }
 
   connect(device, index) {
-    BleClient.connect(device.device.deviceId).then(
-      () => {
+    const deviceId = device.device.deviceId;
+    BleClient.connect(deviceId).then(
+      async () => {
         this.devices[index]['connection'] = true;
         this.change.detectChanges();
-        alert('Connected!');
+        //alert(`Connected to ${JSON.stringify(device)}!`);
+
+        // try {
+        //   await BleClient.write(
+        //     device.deviceId,
+        //     SERVICE_UUID,
+        //     CHARACTERISTIC_UUID,
+        //     hexStringToDataView('746573746d6573616a69')
+        //   );
+        // } catch (error) {
+        //   alert('discover service failed: ' + error)
+        // }
+
+        try {
+          await BleClient.discoverServices(deviceId);
+          const services = await BleClient.getServices(deviceId);
+          const filteredServices = services.filter((service) => {
+            // Servisin characteristics dizisinde write özelliği true olanı kontrol et
+            return service.characteristics.some(
+              (characteristic) =>
+                characteristic.properties.write === true ||
+                characteristic.properties.writeWithoutResponse === true
+            );
+          });
+          const filteredCharacteristics = filteredServices[0].characteristics.filter(characteristic => {
+            return characteristic.properties.write === true ||characteristic.properties.writeWithoutResponse
+          })
+          const str = filteredCharacteristics.map(characteristic => `${JSON.stringify(characteristic)}\n\n\n`)
+          //alert(`${str}`)
+
+          const response = await BleClient.read(deviceId, services[0].uuid, services[0].characteristics[0].uuid);
+          alert('response = ' + JSON.stringify(response) )
+        } catch (error) {
+          alert('discover service failed: ' + error);
+        }
       },
       (error) => {
         alert(error);
