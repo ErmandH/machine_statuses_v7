@@ -8,6 +8,8 @@ import {
 } from '@capacitor-community/bluetooth-le';
 import { AlertController, AlertOptions } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
+import { BleUserService } from '../services/bleuser.service';
+import { CHARACTERISTIC_UUID, SERVICE_UUID } from 'src/constans/constants';
 
 type Device = {
   id: string;
@@ -16,9 +18,6 @@ type Device = {
   data: string;
   settings: string;
 };
-
-const SERVICE_UUID = '49535343-fe7d-4ae5-8fa9-9fafd205e455';
-const CHARACTERISTIC_UUID = '49535343-1e4d-4bd9-ba61-23c647249616';
 
 @Component({
   selector: 'app-device-select',
@@ -34,7 +33,8 @@ export class DeviceSelectPage implements OnInit {
     private router: Router,
     private change: ChangeDetectorRef,
     private alertController: AlertController,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private bleService: BleUserService
   ) {
     console.log('scan page open');
     // this.devices = [
@@ -59,10 +59,19 @@ export class DeviceSelectPage implements OnInit {
     // ];
     //this.scanForDevices();
   }
-  ngOnInit() {
+
+  async ngOnInit() {
     BleClient.initialize().then(() => {
-      BleClient.isEnabled().then((enabled) => {
+      BleClient.isEnabled().then(async (enabled) => {
         this.ble = enabled;
+        const devices = await BleClient.getConnectedDevices([SERVICE_UUID]);
+        this.devices = devices.map((device) => ({
+          ...device,
+          connection: true,
+        }));
+        // if (!enabled) {
+        //   await BleClient.requestEnable();
+        // }
       });
     });
   }
@@ -89,6 +98,7 @@ export class DeviceSelectPage implements OnInit {
 
   enableBluetooth() {
     BleClient.enable();
+    //BleClient.requestEnable();
   }
 
   disableBluetooth() {
@@ -96,12 +106,12 @@ export class DeviceSelectPage implements OnInit {
   }
 
   async startScanning() {
-    this.devices = [];
+    const devices = await BleClient.getConnectedDevices([SERVICE_UUID]);
+    this.devices = devices.map((device) => ({ ...device, connection: true }));
     this.scanText = 'Scanning...';
-
     BleClient.requestLEScan({ allowDuplicates: false }, (result) => {
       if (result.localName) {
-        this.devices.push(result);
+        this.devices.push(result.device);
         this.change.detectChanges();
       }
     });
@@ -115,7 +125,7 @@ export class DeviceSelectPage implements OnInit {
   }
 
   async connect(device, index) {
-    const deviceId = device.device.deviceId;
+    const deviceId = device.deviceId;
 
     try {
       // connect to device
@@ -124,7 +134,7 @@ export class DeviceSelectPage implements OnInit {
       });
       await this.showAlert({
         header: this.translate.instant('success'),
-        message: `${this.translate.instant('connected')} ${device.localName}`,
+        message: `${this.translate.instant('connected')} ${device.name}`,
         buttons: [
           {
             text: this.translate.instant('ok'),
@@ -135,11 +145,11 @@ export class DeviceSelectPage implements OnInit {
         ],
       });
       this.devices[index]['connection'] = true;
+      localStorage.setItem('bleDeviceId', deviceId);
       this.change.detectChanges();
-      await this.startNotifications(deviceId, (value) => {});
-      setInterval(async () => {
-        await this.write(deviceId, textToDataView('test mesaji'));
-      }, 4000);
+      await this.bleService.startNotifications((value) =>
+        alert(dataViewToText(value))
+      );
     } catch (error) {
       await this.showAlert({
         header: this.translate.instant('error'),
@@ -155,11 +165,11 @@ export class DeviceSelectPage implements OnInit {
   }
 
   disconnect(device, index) {
-    BleClient.disconnect(device.device.deviceId).then(async () => {
+    BleClient.disconnect(device.deviceId).then(async () => {
       await this.showAlert({
         header: this.translate.instant('disconnected'),
         message: `${this.translate.instant('disconnect-message')} ${
-          device.localName
+          device.name
         }`,
         buttons: [
           {
@@ -173,22 +183,6 @@ export class DeviceSelectPage implements OnInit {
       this.devices[index]['connection'] = false;
       this.change.detectChanges();
     });
-  }
-
-  async startNotifications(
-    deviceId: string,
-    callback: (value: DataView) => void
-  ) {
-    await BleClient.startNotifications(
-      deviceId,
-      SERVICE_UUID,
-      CHARACTERISTIC_UUID,
-      callback
-    );
-  }
-
-  async write(deviceId: string, value: DataView) {
-    await BleClient.write(deviceId, SERVICE_UUID, CHARACTERISTIC_UUID, value);
   }
 
   async showAlert(opts: AlertOptions) {

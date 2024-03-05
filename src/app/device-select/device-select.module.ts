@@ -8,6 +8,7 @@ import { DeviceSelectPageRoutingModule } from './device-select-routing.module';
 
 import { DeviceSelectPage } from './device-select.page';
 import { TranslateModule } from '@ngx-translate/core';
+import { BleUserService } from 'bleservicelegacy';
 
 @NgModule({
   imports: [
@@ -15,8 +16,9 @@ import { TranslateModule } from '@ngx-translate/core';
     FormsModule,
     IonicModule,
     DeviceSelectPageRoutingModule,
-    TranslateModule
+    TranslateModule,
   ],
-  declarations: [DeviceSelectPage]
+  declarations: [DeviceSelectPage],
+  providers: [BleUserService],
 })
 export class DeviceSelectPageModule {}

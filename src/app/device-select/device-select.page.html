@@ -44,7 +44,7 @@
   </h2> -->
   <ion-card *ngFor="let device of devices; let i = index" class="rounded-2xl">
     <ion-card-content class="flex items-center justify-between">
-      <ion-card-title>{{device.localName}}</ion-card-title>
+      <ion-card-title>{{device.name}}</ion-card-title>
       <ion-button (click)="connect(device, i)" *ngIf="!device.connection" shape="round" slot="end">Connect</ion-button>
       <ion-button (click)="disconnect(device, i)" *ngIf="device.connection" shape="round"
         slot="end">Disconnect</ion-button>
