@@ -22,4 +22,13 @@ export class BleUserService {
       callback
     );
   }
+
+  async disconnect() {
+    const deviceId = localStorage.getItem('bleDeviceId');
+    await BleClient.disconnect(deviceId);
+    localStorage.removeItem('bleDeviceId');
+    localStorage.removeItem('data');
+    localStorage.removeItem('settings');
+    localStorage.removeItem('conn');
+  }
 }

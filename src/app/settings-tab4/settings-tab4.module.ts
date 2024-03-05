@@ -8,6 +8,7 @@ import { SettingsTab4PageRoutingModule } from './settings-tab4-routing.module';
 
 import { SettingsTab4Page } from './settings-tab4.page';
 import { TranslateModule } from '@ngx-translate/core';
+import { BleUserService } from '../services/bleuser.service';
 
 @NgModule({
   imports: [
@@ -15,8 +16,9 @@ import { TranslateModule } from '@ngx-translate/core';
     FormsModule,
     IonicModule,
     SettingsTab4PageRoutingModule,
-    TranslateModule
+    TranslateModule,
   ],
-  declarations: [SettingsTab4Page]
+  providers: [BleUserService],
+  declarations: [SettingsTab4Page],
 })
 export class SettingsTab4PageModule {}

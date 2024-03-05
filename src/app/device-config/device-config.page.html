@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <div id="left-wrapper" class="flex gap-1 items-center">
+      <ion-button (click)="goBack()" color="light" fill="clear" shape="round">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+      <h1 class="text-white text-xl">{{'device-config' | translate}}</h1>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light" class="ion-padding">
+  <h1 class="px-4 text-xl font-semibold">Please provide the required configurations</h1>
+
+  <ion-card class="min-w-64">
+    <ion-card-content class="flex flex-col gap-2">
+      <div class="item-container flex justify-between items-center p-1">
+        <span class="text-black text-base">$CONN</span>
+        <ion-spinner *ngIf="!connReceieved"></ion-spinner>
+        <ion-icon *ngIf="connReceieved" color="success" style="width: 28px; height: 28px;"
+          name="checkmark-outline"></ion-icon>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="min-w-64">
+    <ion-card-content class="flex flex-col gap-2">
+      <div class="item-container flex justify-between items-center p-1">
+        <span class="text-black text-base">$SETTINGS</span>
+        <ion-spinner *ngIf="!settingsReceived"></ion-spinner>
+        <ion-icon *ngIf="settingsReceived" color="success" style="width: 28px; height: 28px;"
+          name="checkmark-outline"></ion-icon>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="min-w-64">
+    <ion-card-content class="flex flex-col gap-2">
+      <div class="item-container flex justify-between items-center p-1">
+        <span class="text-black text-base">$DATA</span>
+        <ion-spinner *ngIf="!dataReceived"></ion-spinner>
+        <ion-icon *ngIf="dataReceived" color="success" style="width: 28px; height: 28px;"
+          name="checkmark-outline"></ion-icon>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

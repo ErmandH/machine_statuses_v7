@@ -60,15 +60,23 @@ export class DeviceSelectPage implements OnInit {
     //this.scanForDevices();
   }
 
+  async ionViewDidEnter() {
+    const devices = await BleClient.getConnectedDevices([SERVICE_UUID]);
+    this.devices = devices.map((device) => ({
+      ...device,
+      connection: true,
+    }));
+  }
+
   async ngOnInit() {
     BleClient.initialize().then(() => {
       BleClient.isEnabled().then(async (enabled) => {
         this.ble = enabled;
         const devices = await BleClient.getConnectedDevices([SERVICE_UUID]);
-        this.devices = devices.map((device) => ({
-          ...device,
-          connection: true,
-        }));
+        // this.devices = devices.map((device) => ({
+        //   ...device,
+        //   connection: true,
+        // }));
         // if (!enabled) {
         //   await BleClient.requestEnable();
         // }
@@ -147,9 +155,7 @@ export class DeviceSelectPage implements OnInit {
       this.devices[index]['connection'] = true;
       localStorage.setItem('bleDeviceId', deviceId);
       this.change.detectChanges();
-      await this.bleService.startNotifications((value) =>
-        alert(dataViewToText(value))
-      );
+      this.router.navigateByUrl('/device-config');
     } catch (error) {
       await this.showAlert({
         header: this.translate.instant('error'),
@@ -166,6 +172,11 @@ export class DeviceSelectPage implements OnInit {
 
   disconnect(device, index) {
     BleClient.disconnect(device.deviceId).then(async () => {
+      localStorage.removeItem('bleDeviceId');
+      localStorage.removeItem('data');
+      localStorage.removeItem('settings');
+      localStorage.removeItem('conn');
+
       await this.showAlert({
         header: this.translate.instant('disconnected'),
         message: `${this.translate.instant('disconnect-message')} ${

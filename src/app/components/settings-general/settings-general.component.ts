@@ -1,8 +1,10 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { textToDataView } from '@capacitor-community/bluetooth-le';
 import { AlertController, IonInput, ToastController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
+import { BleUserService } from 'src/app/services/bleuser.service';
 import { MachineSettings } from 'src/models/MachineSettings';
 import loadMachineSettings from 'src/utils/loadMachineSettings';
 
@@ -23,7 +25,8 @@ export class SettingsGeneralComponent implements OnInit {
   constructor(
     private alertService: AlertController,
     private toastr: ToastController,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private bleService: BleUserService
   ) {
     this.machineSettings = loadMachineSettings();
   }
@@ -42,6 +45,7 @@ export class SettingsGeneralComponent implements OnInit {
     // array to string
     const settingsString = dataArray.join(',');
     localStorage.setItem('settings', settingsString);
+    await this.bleService.write(textToDataView(settingsString));
     // create success alert
     const alert = await this.alertService.create({
       header: this.translate.instant('success'),

@@ -4,21 +4,22 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SettingsTab3PageRoutingModule } from './settings-tab3-routing.module';
+import { DeviceConfigPageRoutingModule } from './device-config-routing.module';
 
-import { SettingsTab3Page } from './settings-tab3.page';
+import { DeviceConfigPage } from './device-config.page';
 import { TranslateModule } from '@ngx-translate/core';
 import { BleUserService } from '../services/bleuser.service';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SettingsTab3PageRoutingModule,
-    TranslateModule,
+    DeviceConfigPageRoutingModule,
+    TranslateModule
   ],
-  providers: [BleUserService],
-  declarations: [SettingsTab3Page],
+  providers:[BleUserService],
+  declarations: [DeviceConfigPage]
 })
-export class SettingsTab3PageModule {}
+export class DeviceConfigPageModule {}

@@ -4,6 +4,7 @@ import { SettingsGeneralComponent } from './settings-general.component';
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BleUserService } from 'src/app/services/bleuser.service';
 
 @NgModule({
   declarations: [SettingsGeneralComponent],
@@ -14,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
   ],
-
-  exports:[SettingsGeneralComponent]
+  providers: [BleUserService],
+  exports: [SettingsGeneralComponent],
 })
 export class SettingsGeneralModule {}

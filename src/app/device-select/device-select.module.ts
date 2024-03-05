@@ -8,7 +8,7 @@ import { DeviceSelectPageRoutingModule } from './device-select-routing.module';
 
 import { DeviceSelectPage } from './device-select.page';
 import { TranslateModule } from '@ngx-translate/core';
-import { BleUserService } from 'bleservicelegacy';
+import { BleUserService } from '../services/bleuser.service';
 
 @NgModule({
   imports: [

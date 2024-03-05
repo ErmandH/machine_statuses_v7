@@ -4,17 +4,12 @@ import { SettingsGeneralFertilizerComponent } from './settings-general-fertilize
 import { TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-
-
+import { BleUserService } from 'src/app/services/bleuser.service';
 
 @NgModule({
   declarations: [SettingsGeneralFertilizerComponent],
-  imports: [
-    CommonModule,
-    IonicModule,
-    TranslateModule,
-    ReactiveFormsModule
-  ],
-  exports: [SettingsGeneralFertilizerComponent]
+  imports: [CommonModule, IonicModule, TranslateModule, ReactiveFormsModule],
+  exports: [SettingsGeneralFertilizerComponent],
+  providers: [BleUserService],
 })
-export class SettingsGeneralFertilizerModule { }
+export class SettingsGeneralFertilizerModule {}

@@ -41,6 +41,10 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule),
     canActivate: [DeviceGuard]
   },
+  {
+    path: 'device-config',
+    loadChildren: () => import('./device-config/device-config.module').then( m => m.DeviceConfigPageModule)
+  },
 ];
 @NgModule({
   imports: [
