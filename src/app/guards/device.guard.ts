@@ -22,7 +22,7 @@ export class DeviceGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (localStorage.getItem('bleDeviceId')) {
+    if (localStorage.getItem('data')) {
       return true;
     }
     else{

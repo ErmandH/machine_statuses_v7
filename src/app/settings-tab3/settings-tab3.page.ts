@@ -6,6 +6,7 @@ import loadMachineSettings from 'src/utils/loadMachineSettings';
 import { loadMachineStatuses } from 'src/utils/loadMachineStatus';
 import { BleUserService } from '../services/bleuser.service';
 import { textToDataView } from '@capacitor-community/bluetooth-le';
+import { DataService } from '../services/dataservice.service';
 
 @Component({
   selector: 'app-settings-tab3',
@@ -15,7 +16,9 @@ import { textToDataView } from '@capacitor-community/bluetooth-le';
 export class SettingsTab3Page implements OnInit {
   machineStatus: MachineStatus;
   machineSettings: MachineSettings;
-  constructor(private router: Router, private bleService: BleUserService) {}
+  constructor(private router: Router, private bleService: BleUserService, private data: DataService) {
+
+  }
 
   ngOnInit(): void {
     this.loadSettings();
@@ -26,14 +29,15 @@ export class SettingsTab3Page implements OnInit {
     settingsData[8 + machineIndex] = event.detail.checked ? '1' : '0';
     const settingsString = settingsData.join(',');
     localStorage.setItem('settings', settingsString);
+    this.data.changeMachineSettings()
     await this.bleService.write(textToDataView(settingsString));
     machine.show = event.detail.checked;
   }
 
   loadSettings() {
-    this.machineSettings = loadMachineSettings();
-    this.machineStatus = loadMachineStatuses();
-    return this.machineStatus;
+    this.data.machineStatus.subscribe(status => this.machineStatus = status);
+    this.data.machineSettings.subscribe(settings => this.machineSettings = settings);
+    return this.machineStatus
   }
 
   openCalibrationModal = () => {

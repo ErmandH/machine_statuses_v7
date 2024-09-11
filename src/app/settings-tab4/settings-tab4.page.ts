@@ -4,6 +4,7 @@ import { textToDataView } from '@capacitor-community/bluetooth-le';
 import { Motor } from 'src/models/MachineSettings';
 import loadMachineSettings from 'src/utils/loadMachineSettings';
 import { BleUserService } from '../services/bleuser.service';
+import { DataService } from '../services/dataservice.service';
 
 @Component({
   selector: 'app-settings-tab4',
@@ -11,13 +12,14 @@ import { BleUserService } from '../services/bleuser.service';
   styleUrls: ['./settings-tab4.page.scss'],
 })
 export class SettingsTab4Page {
-  constructor(private router: Router, private bleService: BleUserService) {}
+  constructor(private router: Router, private bleService: BleUserService, private data: DataService) { }
 
   async onToggleChange(event: any, motor: Motor, motorIndex: number) {
     const settingsData = localStorage.getItem('settings').split(',');
     settingsData[21 + motorIndex] = event.detail.checked ? '1' : '0';
     const settingsString = settingsData.join(',');
     localStorage.setItem('settings', settingsString);
+    this.data.changeMachineSettings()
     await this.bleService.write(textToDataView(settingsString));
     motor.enabled = event.detail.checked;
   }

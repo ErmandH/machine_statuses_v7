@@ -5,6 +5,7 @@ import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { BleUserService } from 'src/app/services/bleuser.service';
+import { DataService } from 'src/app/services/dataservice.service';
 import { MachineSettings } from 'src/models/MachineSettings';
 import loadMachineSettings from 'src/utils/loadMachineSettings';
 
@@ -19,9 +20,10 @@ export class SettingsGeneralFertilizerComponent implements OnInit {
   constructor(
     private alertService: AlertController,
     private translate: TranslateService,
-    private bleService: BleUserService
+    private bleService: BleUserService,
+    private data: DataService
   ) {
-    this.machineSettings = loadMachineSettings();
+    this.data.machineSettings.subscribe(settings => this.machineSettings = settings);
   }
   ngOnInit() {
     this.info = new FormGroup({
@@ -113,6 +115,7 @@ export class SettingsGeneralFertilizerComponent implements OnInit {
     // array to string
     const settingsString = dataArray.join(',');
     localStorage.setItem('settings', settingsString);
+    this.data.changeMachineSettings()
     await this.bleService.write(textToDataView(settingsString));
     // create success alert
     const alert = await this.alertService.create({

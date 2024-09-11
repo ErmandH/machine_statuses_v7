@@ -69,19 +69,29 @@ export class DeviceSelectPage implements OnInit {
   }
 
   async ngOnInit() {
-    BleClient.initialize().then(() => {
-      BleClient.isEnabled().then(async (enabled) => {
-        this.ble = enabled;
-        const devices = await BleClient.getConnectedDevices([SERVICE_UUID]);
-        // this.devices = devices.map((device) => ({
-        //   ...device,
-        //   connection: true,
-        // }));
-        // if (!enabled) {
-        //   await BleClient.requestEnable();
-        // }
+    try {
+      BleClient.initialize().then(() => {
+        try {
+          BleClient.isEnabled().then(async (enabled) => {
+            this.ble = enabled;
+            const devices = await BleClient.getConnectedDevices([SERVICE_UUID]);
+            // this.devices = devices.map((device) => ({
+            //   ...device,
+            //   connection: true,
+            // }));
+            // if (!enabled) {
+            //   await BleClient.requestEnable();
+            // }
+          });
+        } catch (error) {
+          alert("BleClient.isEnabled() error: " +  error)
+        }
+        
       });
-    });
+    } catch (error) {
+      alert("BleClient.initilaze() error: " +  error)
+    }
+    
   }
   selectDevice(device: Device) {
     localStorage.setItem('bleDeviceId', device.id);
@@ -105,31 +115,63 @@ export class DeviceSelectPage implements OnInit {
   }
 
   enableBluetooth() {
-    BleClient.enable();
-    //BleClient.requestEnable();
+    try {
+      BleClient.enable();
+      //BleClient.requestEnable();
+    } catch (error) {
+      alert("BleClient.enable() error:" + error)
+    }
+
   }
 
   disableBluetooth() {
-    BleClient.disable();
+    try {
+      BleClient.disable();
+    } catch (error) {
+      alert("BleClient.disable() error:" + error)
+    }
+    
   }
 
   async startScanning() {
-    const devices = await BleClient.getConnectedDevices([SERVICE_UUID]);
-    this.devices = devices.map((device) => ({ ...device, connection: true }));
-    this.scanText = 'Scanning...';
-    BleClient.requestLEScan({ allowDuplicates: false }, (result) => {
-      if (result.localName) {
-        this.devices.push(result.device);
-        this.change.detectChanges();
-      }
-    });
-    setTimeout(() => this.stopScanning(), 7000);
+    try {
+      const devices = await BleClient.getConnectedDevices([SERVICE_UUID]);
+      this.devices = devices.map((device) => ({ ...device, connection: true }));
+      this.scanText = 'Scanning...';
+      BleClient.requestLEScan({ allowDuplicates: false /* false normalde */ }, (result) => {
+        try {
+          // düzelt burayı sonra
+          //if (result.localName) {
+            this.devices.push(result.device);
+            this.change.detectChanges();
+          //}
+        } catch (error) {
+          alert("requestLEScan function error: " + error)
+        }
+        
+      });
+      setTimeout(() => {
+        try {
+          this.stopScanning()
+        } catch (error) {
+          alert("Error on stop scanning: " + error)
+        }
+      }, 7000);
+    } catch (error) {
+      alert("Scan error: " + error)
+    }
+
   }
 
   stopScanning(): void {
-    BluetoothLe.stopLEScan().then(() => {
-      this.scanText = '';
-    });
+    try {
+      BluetoothLe.stopLEScan().then(() => {
+        this.scanText = '';
+      });
+    } catch (error) {
+      alert("stopScanning() error: " + error)
+    }
+    
   }
 
   async connect(device, index) {
@@ -163,7 +205,7 @@ export class DeviceSelectPage implements OnInit {
         buttons: [
           {
             text: this.translate.instant('ok'),
-            handler: () => {},
+            handler: () => { },
           },
         ],
       });
@@ -179,9 +221,8 @@ export class DeviceSelectPage implements OnInit {
 
       await this.showAlert({
         header: this.translate.instant('disconnected'),
-        message: `${this.translate.instant('disconnect-message')} ${
-          device.name
-        }`,
+        message: `${this.translate.instant('disconnect-message')} ${device.name
+          }`,
         buttons: [
           {
             text: this.translate.instant('ok'),

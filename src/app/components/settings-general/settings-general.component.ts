@@ -5,6 +5,7 @@ import { AlertController, IonInput, ToastController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { BleUserService } from 'src/app/services/bleuser.service';
+import { DataService } from 'src/app/services/dataservice.service';
 import { MachineSettings } from 'src/models/MachineSettings';
 import loadMachineSettings from 'src/utils/loadMachineSettings';
 
@@ -26,9 +27,10 @@ export class SettingsGeneralComponent implements OnInit {
     private alertService: AlertController,
     private toastr: ToastController,
     private translate: TranslateService,
-    private bleService: BleUserService
+    private bleService: BleUserService,
+    private data: DataService
   ) {
-    this.machineSettings = loadMachineSettings();
+    this.data.machineSettings.subscribe(settings => this.machineSettings = settings);
   }
   async onFormSubmit() {
     const dataArray = localStorage.getItem('settings').split(',');
@@ -45,6 +47,7 @@ export class SettingsGeneralComponent implements OnInit {
     // array to string
     const settingsString = dataArray.join(',');
     localStorage.setItem('settings', settingsString);
+    this.data.changeMachineSettings()
     await this.bleService.write(textToDataView(settingsString));
     // create success alert
     const alert = await this.alertService.create({
@@ -98,7 +101,7 @@ export class SettingsGeneralComponent implements OnInit {
         Validators.max(10),
         Validators.required,
       ]),
-      seedControlPeriod: new FormControl(this.machineSettings.period, [
+      seedControlPeriod: new FormControl(this.machineSettings.period.toString(), [
         Validators.required,
       ]),
     });
@@ -116,10 +119,10 @@ export class SettingsGeneralComponent implements OnInit {
 
   isButtonDisabled(): Observable<boolean> {
     return new Observable((observer) => {
+
       this.info.valueChanges.subscribe(() => {
         // isButtonDisabled değeri her seferinde güncellenir
         const isDisabled = this.info.invalid;
-        //console.log(isDisabled)
         observer.next(isDisabled);
       });
     });

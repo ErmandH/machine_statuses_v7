@@ -8,6 +8,7 @@ import { loadMachineStatuses } from 'src/utils/loadMachineStatus';
 import { HomeButtonsPopoverComponent } from '../components/home-buttons-popover/home-buttons-popover.component';
 import loadMachineSettings from 'src/utils/loadMachineSettings';
 import { ScreenOrientation } from '@capacitor/screen-orientation';
+import { DataService } from '../services/dataservice.service';
 
 @Component({
   selector: 'app-home',
@@ -25,8 +26,12 @@ export class HomePage implements OnInit {
   constructor(
     private router: Router,
     private alertCtrl: AlertController,
-    private popoverCtrl: PopoverController
-  ) {}
+    private popoverCtrl: PopoverController,
+    private data: DataService
+  ) {
+    this.data.machineStatus.subscribe(status => this.machineStatus = status);
+    this.data.machineSettings.subscribe(settings => this.machineSettings = settings);
+  }
 
   async ionViewDidEnter() {
     try {
@@ -45,13 +50,13 @@ export class HomePage implements OnInit {
         })
         .then(async (alert) => await alert.present());
     }
-    this.machineStatus = loadMachineStatuses();
-    this.machineSettings = loadMachineSettings();
+    this.data.machineStatus.subscribe(status => this.machineStatus = status);
+    this.data.machineSettings.subscribe(settings => this.machineSettings = settings);
   }
 
   ngOnInit() {
-    this.machineStatus = loadMachineStatuses();
-    this.machineSettings = loadMachineSettings();
+    this.data.machineStatus.subscribe(status => this.machineStatus = status);
+    this.data.machineSettings.subscribe(settings => this.machineSettings = settings);
   }
 
   openCloseSound() {

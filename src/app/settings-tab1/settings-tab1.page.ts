@@ -33,7 +33,7 @@ export class SettingsTab1Page implements AfterViewInit, OnInit {
     private route: ActivatedRoute,
     private router: Router,
     protected cdr: ChangeDetectorRef
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.machineSettings = loadMachineSettings();
@@ -58,6 +58,7 @@ export class SettingsTab1Page implements AfterViewInit, OnInit {
 
   ngAfterViewInit() {
     this.settingsGeneralComponent.isButtonDisabled().subscribe((value) => {
+      console.log("value " + value)
       this.isButtonDisabled = value;
     });
     this.cdr.markForCheck()
